@@ -50,155 +50,33 @@
         <canvas id="triangle2" width="100" height="200"></canvas>
         <p>Triangles has three sides and three angles</p>
         <p>Sum of each corner angles equals to (180<sup>o</sup>)</p>
-
     </div>
 
-    <a name="create"></a>
-    <div class="scrollblock block-create">
-        <h2>create a new repository</h2>
-        <p>
-            create a new directory, open it and perform a <br />
-            <code>git init</code><br />
-            to create a new git repository.
-        </p>
+    <a name="Paralellogram"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Parallelogram</h2>
+        <p></p>
+        <canvas id="parallelogram1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="parallelogram2" width="200" height="200"></canvas>
+        <p>Parallelogram has four sides</p>
+        <p>Opposite sides are parallel to each other</p>
+        <p>Opposite sides has the same length</p>
     </div>
-    <a name="checkout"></a>
-    <div class="scrollblock block-checkout">
-        <h2>checkout a repository</h2>
-        <p>
-            create a working copy of a local repository by running the command<br />
-            <code>git clone /path/to/repository</code><br />
-            when using a remote server, your command will be<br />
-            <code>git clone username@host:/path/to/repository</code>
-        </p>
-    </div>
-    <a name="trees"></a>
-    <div class="scrollblock block-trees">
-        <h2>workflow</h2>
-        <p>
-            your local repository consists of three "trees" maintained by git.
-            the first one is your <code>Working Directory</code> which holds the actual files.
-            the second one is the <code>Index</code> which acts as a staging area and
-            finally the <code>HEAD</code> which points to the last commit you've made.
-        </p>
-        
-    </div>
-    <a name="add"></a>
-    <div class="scrollblock block-add">
-        <h2>add &amp; commit</h2>
-        <p>
-            You can propose changes (add it to the <b>Index</b>) using<br />
-            <code>git add &lt;filename&gt;</code><br />
-            <code>git add *</code><br />
-            This is the first step in the basic git workflow. To actually commit these changes use<br />
-            <code>git commit -m "Commit message"</code><br />
-            Now the file is committed to the <b>HEAD</b>, but not in your remote repository yet.
-        </p>
-    </div>
-    <a name="push"></a>
-    <div class="scrollblock block-remote">
-        <h2>pushing changes</h2>
-        <p>
-            Your changes are now in the <b>HEAD</b> of your local working copy. To send those changes to your remote repository, execute <br />
-            <code>git push origin master</code><br />
-            Change <i>master</i> to whatever branch you want to push your changes to.
-            <br /><br />
-            If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with<br />
-            <code>git remote add origin &lt;server&gt;</code><br />
-            Now you are able to push your changes to the selected remote server<br />
 
-        </p>
+    <a name="Trapezoid"></a>
+    <div class="scrollblock block-one">
+        <h2>Trapezoid</h2>
+        <p></p>
+        <canvas id="trapezoid1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="trapezoid2" width="200" height="200"></canvas>
+        <p>Trapezoid has four sides</p>
+        <p>A pair of the opposite sides are parallel to each other</p>
+        <p>Also known as Trapezium (UK)</p>
     </div>
-    <a name="branching"></a>
-    <div class="scrollblock block-branching">
-        <h2>branching</h2>
-        <p>
-            Branches are used to develop features isolated from each other. The <i>master</i> branch is the "default" branch when you create a repository. Use other branches for development and merge them back to the master branch upon completion.
-        </p>
-        
-        <p>
-            create a new branch named "feature_x" and switch to it using<br />
-            <code>git checkout -b feature_x</code><br />
-            switch back to master<br />
-            <code>git checkout master</code><br />
-            and delete the branch again<br />
-            <code>git branch -d feature_x</code><br />
-            a branch is <i>not available to others</i> unless you push the branch to your remote repository<br />
-            <code>git push origin &lt;branch&gt;</code>
-        </p>
-    </div>
-    <a name="update"></a>
-    <div class="scrollblock block-merging">
-        <h2>update &amp; merge</h2>
-        <p>
-            to update your local repository to the newest commit, execute <br />
-            <code>git pull</code><br />
-            in your working directory to <i>fetch</i> and <i>merge</i> remote changes.<br />
-            to merge another branch into your active branch (e.g. master), use<br />
-            <code>git merge &lt;branch&gt;</code><br />
-            in both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in <i>conflicts</i>.
-            You are responsible to merge those <i>conflicts</i>
-            manually by editing the files shown by git. After changing, you need to mark them as merged with<br />
-            <code>git add &lt;filename&gt;</code><br />
-            before merging changes, you can also preview them by using<br />
-            <code>git diff &lt;source_branch&gt; &lt;target_branch&gt;</code>
-        </p>
-    </div>
-    <a name="tagging"></a>
-    <div class="scrollblock block-tagging">
-        <h2>tagging</h2>
-        <p>
-            it's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named <i>1.0.0</i> by executing<br />
-            <code>git tag 1.0.0 1b2e1d63ff</code><br />
-            the <i>1b2e1d63ff</i> stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id by looking at the... <br />
-        </p>
-    </div>
-    <a name="log"></a>
-    <div class="scrollblock block-log">
-        <h2>log</h2>
-        <p>
-            in its simplest form, you can study repository history using..
-            <code>git log</code><br />
-            You can add a lot of parameters to make the log look like what you want. To see only the commits of a certain author:<br />
-            <code>git log --author=bob</code><br />
-            To see a very compressed log where each commit is one line:<br />
-            <code>git log --pretty=oneline</code><br />
-            Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches: <br />
-            <code>git log --graph --oneline --decorate --all</code><br />
-            See only which files have changed: <br />
-            <code>git log --name-status</code><br />
-            These are just a few of the possible parameters you can use. For more, see
-            <code>git log --help</code><br />
-        </p>
-    </div>
-    <a name="checkout-replace"></a>
-    <div class="scrollblock block-checkout-replace">
-        <h2>replace local changes</h2>
-        <p>
-            In case you did something wrong, which for sure never happens ;), you can replace local changes using the command<br />
-            <code>git checkout -- &lt;filename&gt;</code><br />
-            this replaces the changes in your working tree with the last content in HEAD. Changes already added to the index, as well as new files, will be kept.
-        </p>
-        <p>
-            If you instead want to drop all your local changes and commits, fetch the latest history from the server and point your local master branch at it like this<br />
-            <code>git fetch origin</code><br />
-            <code>git reset --hard origin/master</code>
-        </p>
-    </div>
-    <a name="hints"></a>
-    <div class="scrollblock block-hints">
-        <h2>useful hints</h2>
-        <p>
-            built-in git GUI<br />
-            <code>gitk</code><br />
-            use colorful git output<br />
-            <code>git config color.ui true</code><br />
-            show log on just one line per commit<br />
-            <code>git config format.pretty oneline</code><br />
-            use interactive adding<br />
-            <code>git add -i</code>
-        </p>
-    </div>
+
+    
     <script>
         var canvas = document.getElementById('square');
         var context = canvas.getContext('2d');
@@ -276,6 +154,69 @@
         context.strokeStyle = '#fff';
         context.stroke();
 
+        canvas = document.getElementById('parallelogram1'); // right
+        context = canvas.getContext('2d');
+        context.beginPath();
+        context.imageSmoothingEnabled = false
+        context.moveTo(0,0);
+        context.lineTo(150,0);
+        context.lineTo(200,200);
+        context.lineTo(50,200);
+        context.lineTo(0,0);
+        context.closePath();        
+        context.fillStyle = '#FF6A8F';
+        context.fill();
+        context.lineWidth = 0;
+        context.strokeStyle = '#FF6A8F';
+        context.stroke();
+
+        canvas = document.getElementById('parallelogram2'); // right
+        context = canvas.getContext('2d');
+        context.beginPath();
+        context.imageSmoothingEnabled = false
+        context.moveTo(0,50);
+        context.lineTo(200,0);
+        context.lineTo(200,150);
+        context.lineTo(0,200);
+        context.lineTo(0,50);
+        context.closePath();        
+        context.fillStyle = '#FF6A8F';
+        context.fill();
+        context.lineWidth = 0;
+        context.strokeStyle = '#FF6A8F';
+        context.stroke();
+
+        canvas = document.getElementById('trapezoid1'); // right
+        context = canvas.getContext('2d');
+        context.beginPath();
+        context.imageSmoothingEnabled = false
+        context.moveTo(0,0);
+        context.lineTo(150,0);
+        context.lineTo(200,200);
+        context.lineTo(0,200);
+        context.lineTo(0,0);
+        context.closePath();        
+        context.fillStyle = '#fff';
+        context.fill();
+        context.lineWidth = 0;
+        context.strokeStyle = '#fff';
+        context.stroke();
+        
+        canvas = document.getElementById('trapezoid2'); // right
+        context = canvas.getContext('2d');
+        context.beginPath();
+        context.imageSmoothingEnabled = false
+        context.moveTo(50,0);
+        context.lineTo(150,0);
+        context.lineTo(200,200);
+        context.lineTo(0,200);
+        context.lineTo(50,0);
+        context.closePath();        
+        context.fillStyle = '#fff';
+        context.fill();
+        context.lineWidth = 0;
+        context.strokeStyle = '#fff';
+        context.stroke();
       </script>
     
     </body>
