@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Plane (2D) Geometry - Alza Interactive</title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Square</h1>     
+        <p>Square is a flat shape with four equal sides.</p>
+        <p>Each corner is a right angle (90<sup>o</sup>)</p>
+        <p>Each opposite sides of a square are parallel to each other</p>
+    </div>
+    
+    <a name="Perimeter"></a>
+    <div class="scrollblock block-one">
+        <h2>Perimeter</h2>
+        <p></p>        
+        <p>Perimeter of a square is equals to </p>
+        <p><code>four times of its side length</code></p>
+        <canvas id="square" width="200" height="220"></canvas>
+        <p>Above square has a perimeter of &nbsp;<code>4 X 5</code></p>        
+    </div>
+    
+    <a name="Area"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Area</h2>
+        <p></p>
+        <p>Area of a square is equals to</p>
+        <p><code>side length X side length = side length<sup>2</sup></code></p>
+        <p>Each opposite sides is also parallel to each other</p>
+                
+    </div>
+
+    <a name="Triangle"></a>
+    <div class="scrollblock block-one">
+        <h2>Triangle</h2>
+        <p></p>
+        <canvas id="triangle1" width="100" height="200"></canvas>
+        &nbsp;
+        <canvas id="triangle3" width="100" height="200"></canvas>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <canvas id="triangle2" width="100" height="200"></canvas>
+        <p>Triangles has three sides and three angles</p>
+        <p>Sum of each corner angles equals to (180<sup>o</sup>)</p>
+    </div>
+
+    <a name="Paralellogram"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Parallelogram</h2>
+        <p></p>
+        <canvas id="parallelogram1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="parallelogram2" width="200" height="200"></canvas>
+        <p>Parallelogram has four sides</p>
+        <p>Opposite sides are parallel to each other</p>
+        <p>Opposite sides has the same length</p>
+    </div>
+
+    <a name="Trapezoid"></a>
+    <div class="scrollblock block-one">
+        <h2>Trapezoid</h2>
+        <p></p>
+        <canvas id="trapezoid1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="trapezoid2" width="200" height="200"></canvas>
+        <p>Trapezoid has four sides</p>
+        <p>A pair of the opposite sides are parallel to each other</p>
+        <p>Also known as Trapezium (UK)</p>
+    </div>
+
+    <a name="Rhombus"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Rhombus</h2>
+        <p></p>
+        <canvas id="rhombus1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="rhombus2" width="250" height="200"></canvas>
+        <p>Rhombus has four equal sides</p>
+        <p>Rhombus has a diamond like shape</p>
+        <p>Opposite sides are parallel to each other</p>
+    </div>
+
+    <a name="Kite"></a>
+    <div class="scrollblock block-one">
+        <h2>Kite</h2>
+        <p></p>
+        <canvas id="kite1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="kite2" width="250" height="200"></canvas>
+        <p>Well, it is look like a kite, hence the name</p>
+        <p>Has two pairs of side</p>
+        <p>Each pair has two equal length adjacent sides</p>
+    </div>
+
+    <a name="Circle"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Circle</h2>
+        <p></p>
+        <canvas id="circle1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="circle2" width="200" height="200"></canvas>        
+        <p>A circle is a simple close shape</p>
+        <p>Each point of a circle has the same distance from the center</p>
+        
+    </div>
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            //square
+            var points = [0,0, 200,0, 200,200, 0,200, 0,0]
+            drawPolygon(points,'square',colorMain)
+            //rectangle 
+            var points = [0,0, 150,0, 150,200, 0,200, 0,0]
+            drawPolygon(points,'rectangle1',colorAlt)
+            var points = [0,0, 250,0, 250,200, 0,200, 0,0]
+            drawPolygon(points,'rectangle2',colorAlt)
+            //triangle
+            var points = [0,200, 50,0, 100,200, 0,200]
+            drawPolygon(points,'triangle1',colorMain)
+            var points = [0,0, 100,200, 0,200, 0,0]
+            drawPolygon(points,'triangle2',colorMain)
+            var points = [150,0, 100,200, 0,75, 150,0]
+            drawPolygon(points,'triangle3',colorMain)
+            //paralellogram
+            var points = [0,0, 150,0, 200,200, 50,200, 0,0]
+            drawPolygon(points,'parallelogram1',colorAlt)
+            var points = [0,50, 200,0, 250,150, 0,200, 0,50]
+            drawPolygon(points,'parallelogram2',colorAlt)
+            //trapezoid
+            var points = [0,0, 150,0, 200,200, 0,200, 0,0]
+            drawPolygon(points,'trapezoid1',colorMain)
+            var points = [50,0, 150,0, 200,200, 0,200, 50,0]
+            drawPolygon(points,'trapezoid2',colorMain)
+            //rhombus
+            var points = [75,0, 150,100, 75,200, 0,100, 75,0]
+            drawPolygon(points,'rhombus1',colorAlt)
+            var points = [125,0, 250,100, 125,200, 0,100, 125,0]
+            drawPolygon(points,'rhombus2',colorAlt)
+            //kite
+            var points = [75,0, 150,50, 75,200, 0,50, 75,0]
+            drawPolygon(points,'kite1',colorMain)
+            var points = [75,0, 250,100, 75,200, 0,100, 75,0]
+            drawPolygon(points,'kite2',colorMain)
+            //kite
+            var radius = 75
+            drawCircle(radius,'circle1',colorAlt)
+            var radius = 100
+            drawCircle(radius,'circle2',colorAlt)
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>
