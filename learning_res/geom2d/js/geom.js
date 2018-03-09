@@ -40,6 +40,20 @@ function drawCircle (radius,canvasID,color) {
     context.strokeStyle = color;
     context.stroke();
 }
+function drawArc(startAngle,endAngle,radius,canvasID,color) {
+    canvas = document.getElementById(canvasID); // right
+    context = canvas.getContext('2d');
+    context.imageSmoothingEnabled = false
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    context.beginPath();
+    context.arc(centerX, centerY, radius, startAngle, endAngle, false);      
+    //context.fillStyle = color;
+    //context.fill();
+    context.lineWidth = 3;
+    context.strokeStyle = color;
+    context.stroke();
+}
 function drawText (text, x, y, canvasID, color) {
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');

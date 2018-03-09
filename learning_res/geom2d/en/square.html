@@ -33,7 +33,7 @@
         <p>Area of a square is equals to</p>
         <p><code>side length X side length = side length<sup>2</sup></code></p>
         <canvas id="area" width="200" height="250"></canvas>
-        <p>Above square has a perimeter of &nbsp;<code>3 X 3</code></p>        
+        <p>Above square has an area of &nbsp;<code>3 X 3</code></p>        
                 
     </div>
 
@@ -54,54 +54,7 @@
         <p></p>
         <canvas id="rotsymmetry" width="300" height="300"></canvas>
     </div>
-
-    <a name="Trapezoid"></a>
-    <div class="scrollblock block-one">
-        <h2>Trapezoid</h2>
-        <p></p>
-        <canvas id="trapezoid1" width="200" height="200"></canvas>
-        &nbsp;&nbsp;
-        <canvas id="trapezoid2" width="200" height="200"></canvas>
-        <p>Trapezoid has four sides</p>
-        <p>A pair of the opposite sides are parallel to each other</p>
-        <p>Also known as Trapezium (UK)</p>
-    </div>
-
-    <a name="Rhombus"></a>
-    <div class="scrollblock block-one-alt">
-        <h2>Rhombus</h2>
-        <p></p>
-        <canvas id="rhombus1" width="150" height="200"></canvas>
-        &nbsp;
-        <canvas id="rhombus2" width="250" height="200"></canvas>
-        <p>Rhombus has four equal sides</p>
-        <p>Rhombus has a diamond like shape</p>
-        <p>Opposite sides are parallel to each other</p>
-    </div>
-
-    <a name="Kite"></a>
-    <div class="scrollblock block-one">
-        <h2>Kite</h2>
-        <p></p>
-        <canvas id="kite1" width="150" height="200"></canvas>
-        &nbsp;
-        <canvas id="kite2" width="250" height="200"></canvas>
-        <p>Well, it is look like a kite, hence the name</p>
-        <p>Has two pairs of side</p>
-        <p>Each pair has two equal length adjacent sides</p>
-    </div>
-
-    <a name="Circle"></a>
-    <div class="scrollblock block-one-alt">
-        <h2>Circle</h2>
-        <p></p>
-        <canvas id="circle1" width="150" height="200"></canvas>
-        &nbsp;
-        <canvas id="circle2" width="200" height="200"></canvas>        
-        <p>A circle is a simple close shape</p>
-        <p>Each point of a circle has the same distance from the center</p>
-        
-    </div>
+    
     <script src="../js/geom.js"></script>
         
     <script>       
@@ -123,6 +76,14 @@
             drawLineDash(0,150,300,150,'refsymmetry',colorAlt2)
             drawLineDash(0,0,300,300,'refsymmetry',colorAlt2)
             drawLineDash(300,0,0,300,'refsymmetry',colorAlt2)
+            //rot symmetry
+            var points = [20,20, 280,20, 280,280, 20,280, 20,20]
+            drawPolygon(points,'rotsymmetry',colorAlt)
+            drawArc(-Math.PI/2, 0,40,'rotsymmetry',colorMain)
+            drawArc(-Math.PI/2, Math.PI/2,50,'rotsymmetry',colorMain)
+            drawArc(-Math.PI/2, Math.PI,60,'rotsymmetry',colorMain)
+            drawArc(-Math.PI/2, 2 * Math.PI,70,'rotsymmetry',colorMain)
+
         }
         window.onload = draw;        
       </script>
