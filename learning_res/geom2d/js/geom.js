@@ -1,3 +1,14 @@
+function drawLineDash (x1, y1, x2, y2, canvasID, color){
+    canvas = document.getElementById(canvasID); // right
+    context = canvas.getContext('2d');
+    context.strokeStyle = color;
+    context.lineWidth = 3;
+    context.setLineDash([12, 4]);/*dashes are 5px and spaces are 3px*/
+    context.beginPath();
+    context.moveTo(x1,y1);
+    context.lineTo(x2, y2);
+    context.stroke();
+}
 function drawPolygon (points,canvasID,color) {
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');
@@ -28,4 +39,12 @@ function drawCircle (radius,canvasID,color) {
     context.lineWidth = 0;
     context.strokeStyle = color;
     context.stroke();
+}
+function drawText (text, x, y, canvasID, color) {
+    canvas = document.getElementById(canvasID); // right
+    context = canvas.getContext('2d');
+    context.imageSmoothingEnabled = false
+    context.font = "bold 30px Arial";
+    context.fillStyle = color;
+    context.fillText(text,x,y)
 }

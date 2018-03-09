@@ -22,7 +22,7 @@
         <p></p>        
         <p>Perimeter of a square is equals to </p>
         <p><code>four times of its side length</code></p>
-        <canvas id="square" width="200" height="220"></canvas>
+        <canvas id="perimeter" width="200" height="250"></canvas>
         <p>Above square has a perimeter of &nbsp;<code>4 X 5</code></p>        
     </div>
     
@@ -32,33 +32,27 @@
         <p></p>
         <p>Area of a square is equals to</p>
         <p><code>side length X side length = side length<sup>2</sup></code></p>
-        <p>Each opposite sides is also parallel to each other</p>
+        <canvas id="area" width="200" height="250"></canvas>
+        <p>Above square has a perimeter of &nbsp;<code>3 X 3</code></p>        
                 
     </div>
 
-    <a name="Triangle"></a>
+    <a name="Reflectional Symmetry"></a>
     <div class="scrollblock block-one">
-        <h2>Triangle</h2>
+        <h2>Reflectional Symmetry</h2>
         <p></p>
-        <canvas id="triangle1" width="100" height="200"></canvas>
-        &nbsp;
-        <canvas id="triangle3" width="100" height="200"></canvas>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <canvas id="triangle2" width="100" height="200"></canvas>
-        <p>Triangles has three sides and three angles</p>
-        <p>Sum of each corner angles equals to (180<sup>o</sup>)</p>
+        <p>A square has <code>four axes</code> of line (reflectional) symmetry</p>
+        <p></p>
+        <canvas id="refsymmetry" width="300" height="300"></canvas>
     </div>
 
-    <a name="Paralellogram"></a>
+    <a name="Rotational Symmetry"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Parallelogram</h2>
+        <h2>Rotational Symmetry</h2>
         <p></p>
-        <canvas id="parallelogram1" width="200" height="200"></canvas>
-        &nbsp;&nbsp;
-        <canvas id="parallelogram2" width="200" height="200"></canvas>
-        <p>Parallelogram has four sides</p>
-        <p>Opposite sides are parallel to each other</p>
-        <p>Opposite sides has the same length</p>
+        <p>A square has radial (rotational) symmetry of <code>order 4</code></p>
+        <p></p>
+        <canvas id="rotsymmetry" width="300" height="300"></canvas>
     </div>
 
     <a name="Trapezoid"></a>
@@ -114,46 +108,21 @@
         function draw(){
             var colorMain = '#FFF'
             var colorAlt = '#FF6A8F'
-            //square
+            var colorAlt2 = '#000'
+            //perimeter
             var points = [0,0, 200,0, 200,200, 0,200, 0,0]
-            drawPolygon(points,'square',colorMain)
-            //rectangle 
-            var points = [0,0, 150,0, 150,200, 0,200, 0,0]
-            drawPolygon(points,'rectangle1',colorAlt)
-            var points = [0,0, 250,0, 250,200, 0,200, 0,0]
-            drawPolygon(points,'rectangle2',colorAlt)
-            //triangle
-            var points = [0,200, 50,0, 100,200, 0,200]
-            drawPolygon(points,'triangle1',colorMain)
-            var points = [0,0, 100,200, 0,200, 0,0]
-            drawPolygon(points,'triangle2',colorMain)
-            var points = [150,0, 100,200, 0,75, 150,0]
-            drawPolygon(points,'triangle3',colorMain)
-            //paralellogram
-            var points = [0,0, 150,0, 200,200, 50,200, 0,0]
-            drawPolygon(points,'parallelogram1',colorAlt)
-            var points = [0,50, 200,0, 250,150, 0,200, 0,50]
-            drawPolygon(points,'parallelogram2',colorAlt)
-            //trapezoid
-            var points = [0,0, 150,0, 200,200, 0,200, 0,0]
-            drawPolygon(points,'trapezoid1',colorMain)
-            var points = [50,0, 150,0, 200,200, 0,200, 50,0]
-            drawPolygon(points,'trapezoid2',colorMain)
-            //rhombus
-            var points = [75,0, 150,100, 75,200, 0,100, 75,0]
-            drawPolygon(points,'rhombus1',colorAlt)
-            var points = [125,0, 250,100, 125,200, 0,100, 125,0]
-            drawPolygon(points,'rhombus2',colorAlt)
-            //kite
-            var points = [75,0, 150,50, 75,200, 0,50, 75,0]
-            drawPolygon(points,'kite1',colorMain)
-            var points = [75,0, 250,100, 75,200, 0,100, 75,0]
-            drawPolygon(points,'kite2',colorMain)
-            //kite
-            var radius = 75
-            drawCircle(radius,'circle1',colorAlt)
-            var radius = 100
-            drawCircle(radius,'circle2',colorAlt)
+            drawPolygon(points,'perimeter',colorMain)
+            drawText("5",100,235,'perimeter',colorMain)
+            //area
+            drawPolygon(points,'area',colorAlt)
+            drawText("3",100,235,'area',colorAlt)
+            //ref symmetry
+            var points = [20,20, 280,20, 280,280, 20,280, 20,20]
+            drawPolygon(points,'refsymmetry',colorMain)
+            drawLineDash(150,0,150,300,'refsymmetry',colorAlt2)
+            drawLineDash(0,150,300,150,'refsymmetry',colorAlt2)
+            drawLineDash(0,0,300,300,'refsymmetry',colorAlt2)
+            drawLineDash(300,0,0,300,'refsymmetry',colorAlt2)
         }
         window.onload = draw;        
       </script>
