@@ -15,6 +15,7 @@
         <p>Each corner is a right angle (90<sup>o</sup>)</p>
         <p>Each opposite sides has the same length to each other</p>
         <p>Each opposite sides are parallel to each other</p>
+        <canvas id="main" width="270" height="200"></canvas>
     </div>
     
     <a name="Perimeter"></a>
@@ -22,7 +23,7 @@
         <h2>Perimeter</h2>
         <p></p>        
         <p>Perimeter of a rectangle is equals to </p>
-        <p><code>two times the width + two times the height</code><p> OR </p><code>two times  ( width + height )</code></p>
+        <p><code>two times the width + two times the height</code><p> OR </p><p><code>two times  ( width + height )</code></p>
         <canvas id="perimeter" width="270" height="200"></canvas>
         <p>Above rectangle has a perimeter of &nbsp;<code>2 X (5 + 3) </code></p>        
     </div>
@@ -34,7 +35,7 @@
         <p>Area of a rectangle is equals to</p>
         <p><code>width x height</code></p>
         <canvas id="area" width="270" height="200"></canvas>
-        <p>Above square has an area of &nbsp;<code>5 X 3</code></p>        
+        <p>Above rectangle has an area of &nbsp;<code>5 X 3</code></p>        
                 
     </div>
 
@@ -42,7 +43,7 @@
     <div class="scrollblock block-one">
         <h2>Reflectional Symmetry</h2>
         <p></p>
-        <p>A square has <code>four axes</code> of line (reflectional) symmetry</p>
+        <p>A square has <code>two axes</code> of line (reflectional) symmetry</p>
         <p></p>
         <canvas id="refsymmetry" width="340" height="240"></canvas>
     </div>
@@ -74,8 +75,12 @@
             var colorMain = '#FFF'
             var colorAlt = '#FF6A8F'
             var colorAlt2 = '#000'
-            //perimeter
             var points = [0,0, 250,0, 250,150, 0,150, 0,0]
+            //main
+            drawPolygon(points,'main',colorAlt)
+            drawText("w",120,180,'main',colorAlt2)
+            drawText("h",252,85,'main',colorAlt2)
+            //perimeter
             drawPolygon(points,'perimeter',colorMain)
             drawText("5",120,185,'perimeter',colorMain)
             drawText("3",255,90,'perimeter',colorMain)
@@ -87,9 +92,7 @@
             var points = [20,20, 320,20, 320,220, 20,220, 20,20]
             drawPolygon(points,'refsymmetry',colorMain)
             drawLineDash(170,0,170,240,'refsymmetry',colorAlt2)
-            drawLineDash(0,120,340,120,'refsymmetry',colorAlt2)
-            drawLineDash(0,0,340,240,'refsymmetry',colorAlt2)
-            drawLineDash(340,0,0,240,'refsymmetry',colorAlt2)
+            drawLineDash(0,120,340,120,'refsymmetry',colorAlt2)            
             //rot symmetry
             var points = [20,20, 320,20, 320,220, 20,220, 20,20]
             drawPolygon(points,'rotsymmetry',colorAlt)
@@ -100,6 +103,8 @@
             drawPolygon(points,'diagonals',colorMain)
             drawText("4",120,215,'diagonals',colorMain)
             drawText("3",250,110,'diagonals',colorMain)
+            drawLineDash(0,0,240,180,'diagonals',colorAlt2)
+            drawLineDash(240,0,0,180,'diagonals',colorAlt2)
         }
         window.onload = draw;        
       </script>
