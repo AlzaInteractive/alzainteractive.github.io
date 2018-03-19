@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Plane (2D) Geometry - Alza Interactive</title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Triangle</h1>     
+        <p>Triangle is a flat shape with three sides.</p>
+        <p>Triangle has three (tri) angles </p>
+        <p>
+        <canvas id="triangle1" width="100" height="200"></canvas>
+        &nbsp;
+        <canvas id="triangle3" width="100" height="200"></canvas>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <canvas id="triangle2" width="100" height="200"></canvas>
+        </p>
+    </div>
+    
+    <a name="classlength"></a>
+    <div class="scrollblock block-one">
+        <h2>Classification by sides length</h2>
+        <p></p>
+        <p>Based on the length ratio of its three sides, a triangle can be either :</p>        
+        <p><code>equilateral, iscosceles, or scalene</code></p>
+    </div>  
+    
+    <a name="equilateral"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Equilateral Triangle</h2>
+        <p></p>
+        <p>Equilateral triangle has all sides with equal length</p>
+        <p>Consequently, each angles is <code>180<sup>o</sup>/3 = 60<sup>o</sup></code></p>
+        <p>It has rotational symmetry of  <code>order 3 </code></p>
+        <p>It also has reflectional symmetry in <code>3 axes </code></p>
+        <canvas id="equilateral" width="300" height="300"></canvas>
+    </div>
+
+    <a name="iscosceles"></a>
+    <div class="scrollblock block-one">
+        <h2>Iscosceles Triangle</h2>
+        <p></p>
+        <p>Equilateral triangle has two sides with equal length</p>
+        <p>It has <code>order 1</code>  rotational symmetry</p>
+        <p>Reflectional symmetry in <code>1 axes </code></p>
+        <canvas id="iscosceles" width="200" height="300"></canvas>
+                
+    </div>
+
+    <a name="scalene"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Scalene Triangle</h2>
+        <p></p>
+        <p>Scalene triangle has all 3 sides with unequal lengths</p>
+        <p>It has rotational symmetry of  <code>order 1 </code></p>
+        <p>It has <code>zero (no)</code> axis of reflectional symmetry </p>
+        <canvas id="scalene" width="300" height="300"></canvas>
+    </div>
+
+    <a name="anglesum"></a>
+    <div class="scrollblock block-one">
+        <h2>Sum of all angles</h2>
+        <p></p>        
+        <p>For any given triangle, the sum off all angles is always add up to <code>180<sup>o</sup></code></p>
+        <canvas id="sumangles" width="300" height="300"></canvas>
+        <canvas id="sumangles2" width="300" height="300"></canvas>
+    </div>
+
+    <a name="classangle"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Classification by angles sizes</h2>
+        <p></p>
+        <p>Based on the size of its three angles, a triangle can be either :</p>        
+        <p><code>obtuse, acute, or right</code></p>
+    </div>
+
+    <a name="obtuse"></a>
+    <div class="scrollblock block-one">
+        <h2>Obtuse</h2>
+        <p></p>
+        <p>An obtuse triangle has one angle with size larger than 90<sup>o</sup></p>
+        <p></p>
+        <canvas id="obtuse" width="300" height="200"></canvas>
+    </div>
+
+    <a name="acute"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Acute</h2>
+        <p></p>
+        <p>An acute triangle has all 3 angles with size less than 90<sup>o</sup></p>
+        <p>An equilateral triangle is an acute triangle</p>
+        <canvas id="acute" width="300" height="200"></canvas>
+    </div>
+
+    <a name="right"></a>
+    <div class="scrollblock block-one">
+        <h2>Right</h2>
+        <p></p>
+        <p>A right triangle has one angle with size exactly 90<sup>o</sup></p>
+        <p></p>
+        <canvas id="right" width="300" height="200"></canvas>
+    </div>
+
+    <a name="Diagonals"></a>
+    <div class="scrollblock block-one">
+        <h2>Diagonals</h2>
+        <p></p>        
+        <p>Diagonals of a rectangle is equals to </p>
+        <p><code>&radic;<span style="text-decoration: overline">width<sup>2</sup> + <span style="text-decoration: overline">height<sup>2</sup></span></code></p>
+        <p>(phytagoras formula)</p>
+        <canvas id="diagonals" width="270" height="220"></canvas>
+        <p>Above rectangle has a diagonals of &nbsp;<code>&radic;<span style="text-decoration: overline">4<sup>2</sup> + 3<sup>2</sup> </span></code></p>        
+    </div>
+    
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            var colorAlt2 = '#000'
+            var points = [0,0, 250,0, 250,150, 0,150, 0,0]
+            
+            //main
+            var points = [0,200, 50,0, 100,200, 0,200]
+            drawPolygon(points,'triangle1',colorAlt)
+            var points = [0,0, 100,200, 0,200, 0,0]
+            drawPolygon(points,'triangle2',colorAlt)
+            var points = [150,0, 100,200, 0,75, 150,0]
+            drawPolygon(points,'triangle3',colorAlt)
+            //sumangles
+            var points = [0,0, 300,300, 0,300, 0,0]
+            drawPolygon(points,'sumangles',colorMain)
+            drawTextSmaller("45"+String.fromCharCode(176),5,60,'sumangles',colorAlt2)
+            drawTextSmaller("45"+String.fromCharCode(176),240,295,'sumangles',colorAlt2)
+            drawTextSmaller("90"+String.fromCharCode(176),5,295,'sumangles',colorAlt2)
+            drawArcGivenCenter(0,300,-Math.PI/2, 0,55,'sumangles',colorAlt2)
+            drawArcGivenCenter(300,300,-Math.PI, -Math.PI * 3 / 4,80,'sumangles',colorAlt2)
+            drawArcGivenCenter(0,0, Math.PI /4, Math.PI/2  ,80,'sumangles',colorAlt2)
+            //sumangles2
+            val = 150 * Math.sqrt(3)
+            var points = [150,0, 300,val, 0,val, 150,0]
+            drawPolygon(points,'sumangles2',colorMain)
+            drawArcGivenCenter(0,val,-Math.PI / 3, 0,65,'sumangles2',colorAlt2)
+            drawArcGivenCenter(300,val,-Math.PI, -Math.PI * 2 / 3,65,'sumangles2',colorAlt2)
+            drawArcGivenCenter(150,0, Math.PI /3, 2 * Math.PI/3  ,65,'sumangles2',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),135,50,'sumangles2',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),245,val-12,'sumangles2',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),20,val-12,'sumangles2',colorAlt2)
+
+            //equilateral
+            val = 150 * Math.sqrt(3)
+            var points = [150,0, 300,val, 0,val, 150,0]
+            drawPolygon(points,'equilateral',colorAlt)
+            //equilateral refsym axes
+            drawLineDash(150,0,150,val,'equilateral',colorMain)
+            drawLineDash(0,val,225,val/2,'equilateral',colorMain)
+            drawLineDash(75,val/2,300,val,'equilateral',colorMain)
+            //equilateral angle measure
+            drawTextSmaller("60"+String.fromCharCode(176),135,50,'equilateral',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),245,val-12,'equilateral',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),20,val-12,'equilateral',colorAlt2)
+            //equilateral rotsym
+            drawArcGivenCenter(150,2 * val /3, -Math.PI/2, Math.PI/6,30,'equilateral',colorAlt2)
+            drawArcGivenCenter(150,2 * val /3, -Math.PI/2, 5 * Math.PI/6,40,'equilateral',colorAlt2)
+            drawArcGivenCenter(150,2 * val /3, -Math.PI/2, 2 * Math.PI ,50,'equilateral',colorAlt2)
+            //equilateral angles arc
+            drawArcGivenCenter(0,val,-Math.PI / 3, 0,65,'equilateral',colorAlt2)
+            drawArcGivenCenter(300,val,-Math.PI, -Math.PI * 2 / 3,65,'equilateral',colorAlt2)
+            drawArcGivenCenter(150,0, Math.PI /3, 2 * Math.PI/3  ,65,'equilateral',colorAlt2)
+            
+            //iscosceles
+            var points = [100,0, 200,300, 0,300, 100,0]
+            drawPolygon(points,'iscosceles',colorMain)
+            drawLineDash(100,0,100,300,'iscosceles',colorAlt) // iscosceles ref sym
+            drawArcGivenCenter(100,200, -Math.PI/2, 2 * Math.PI ,30,'iscosceles',colorAlt2) // iscosceles rot sym
+
+            //scalene
+            var points = [150,0, 300,250, 100,300, 150,0]
+            drawPolygon(points,'scalene',colorAlt)
+
+            //ref symmetry
+            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
+            drawPolygon(points,'refsymmetry',colorMain)
+            drawLineDash(170,0,170,240,'refsymmetry',colorAlt2)
+            drawLineDash(0,120,340,120,'refsymmetry',colorAlt2)            
+            //rot symmetry
+            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
+            drawPolygon(points,'rotsymmetry',colorAlt)
+            drawArc(-Math.PI/2, Math.PI/2,50,'rotsymmetry',colorMain)
+            drawArc(-Math.PI/2, 2 * Math.PI,70,'rotsymmetry',colorMain)
+            //diagonals
+            var points = [0,0, 240,0, 240,180, 0,180, 0,0]
+            drawPolygon(points,'diagonals',colorMain)
+            drawText("4",120,215,'diagonals',colorMain)
+            drawText("3",250,110,'diagonals',colorMain)
+            drawLineDash(0,0,240,180,'diagonals',colorAlt2)
+            drawLineDash(240,0,0,180,'diagonals',colorAlt2)
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>

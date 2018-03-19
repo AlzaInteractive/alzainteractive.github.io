@@ -1,6 +1,7 @@
 function drawLineDash (x1, y1, x2, y2, canvasID, color){
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');
+    context.imageSmoothingEnabled = false
     context.strokeStyle = color;
     context.lineWidth = 3;
     context.setLineDash([12, 4]);/*dashes are 5px and spaces are 3px*/
@@ -41,11 +42,14 @@ function drawCircle (radius,canvasID,color) {
     context.stroke();
 }
 function drawArc(startAngle,endAngle,radius,canvasID,color) {
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    drawArcGivenCenter(centerX, centerY,  startAngle, endAngle, radius,canvasID, color);      
+}
+function drawArcGivenCenter(centerX,centerY,startAngle,endAngle,radius,canvasID,color) {
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');
     context.imageSmoothingEnabled = false
-    var centerX = canvas.width / 2;
-    var centerY = canvas.height / 2;
     context.beginPath();
     context.arc(centerX, centerY, radius, startAngle, endAngle, false);      
     //context.fillStyle = color;
@@ -57,8 +61,16 @@ function drawArc(startAngle,endAngle,radius,canvasID,color) {
 function drawText (text, x, y, canvasID, color) {
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');
-    context.imageSmoothingEnabled = false
-    context.font = "bold 30px Arial";
+    context.imageSmoothingEnabled = true
+    context.font = "30px Arial";
+    context.fillStyle = color;
+    context.fillText(text,x,y)
+}
+function drawTextSmaller (text, x, y, canvasID, color) {
+    canvas = document.getElementById(canvasID); // right
+    context = canvas.getContext('2d');
+    context.imageSmoothingEnabled = true
+    context.font = "25px Arial";
     context.fillStyle = color;
     context.fillText(text,x,y)
 }
