@@ -85,7 +85,7 @@
         <p></p>
         <p>An obtuse triangle has one angle with size larger than 90<sup>o</sup></p>
         <p></p>
-        <canvas id="obtuse" width="300" height="200"></canvas>
+        <canvas id="obtuse" width="400" height="200"></canvas>
     </div>
 
     <a name="acute"></a>
@@ -93,8 +93,10 @@
         <h2>Acute</h2>
         <p></p>
         <p>An acute triangle has all 3 angles with size less than 90<sup>o</sup></p>
-        <p>An equilateral triangle is an acute triangle</p>
-        <canvas id="acute" width="300" height="200"></canvas>
+        <canvas id="acute2" width="200" height="200"></canvas>
+        <p>An equilateral triangle is an example of acute triangle</p>
+        <canvas id="acute" width="300" height="300"></canvas>
+        
     </div>
 
     <a name="right"></a>
@@ -103,18 +105,48 @@
         <p></p>
         <p>A right triangle has one angle with size exactly 90<sup>o</sup></p>
         <p></p>
-        <canvas id="right" width="300" height="200"></canvas>
+        <canvas id="right1" width="300" height="200"></canvas>
+        <canvas id="right2" width="300" height="200"></canvas>
     </div>
 
-    <a name="Diagonals"></a>
+    <a name="perimeter"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Perimeter</h2>
+        <p></p>
+        <p>Perimeter of a triangle is the sum of its sides</p>
+        <canvas id="perimeter" width="250" height="250"></canvas>
+        <p>above triangle has a perimeter of <code>3+4+5=12</code> unit of length</p>
+    </div>
+
+    <a name="area"></a>
     <div class="scrollblock block-one">
-        <h2>Diagonals</h2>
-        <p></p>        
-        <p>Diagonals of a rectangle is equals to </p>
-        <p><code>&radic;<span style="text-decoration: overline">width<sup>2</sup> + <span style="text-decoration: overline">height<sup>2</sup></span></code></p>
-        <p>(phytagoras formula)</p>
-        <canvas id="diagonals" width="270" height="220"></canvas>
-        <p>Above rectangle has a diagonals of &nbsp;<code>&radic;<span style="text-decoration: overline">4<sup>2</sup> + 3<sup>2</sup> </span></code></p>        
+        <h2>Area</h2>
+        <p></p>
+        <p>Area of a triangle equals to <code>1/2 x base x height</code></p>
+        <p></p>
+        <canvas id="area1" width="300" height="240"></canvas>
+        <canvas id="area2" width="250" height="240"></canvas>
+        <p>Triangle on the left has <code>1/2 x 30 x 20 = 300 square unit of area</code>,</p>
+        <p>while triangle on the right has <code>1/2 x 3 x 4 = 6 square unit of area</code></p>
+    </div>
+
+    <a name="pythagoras"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Pythagorean Triples</h2>
+        <p></p>
+        <p>Pythagorean triples are integers solution that satisfy the pythagorean theorem where</p>
+        <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code>
+        <p>In a right triangle, a and b are the two adjacent sides with 90<sup>o</sup> or right angle, </p><p>while c are the hypotenuse (the longest side, opposite of the right angle)</p>
+        <canvas id="pytha1" width="300" height="200"></canvas>
+        <p>In above example, c length can be calculate as </p>
+        <p><code>c<sup>2</sup> = 3<sup>2</sup> + 4<sup>2</sup> = 25</code></p>
+        <p><code>c = 5</code></p>
+        <canvas id="pytha2" width="300" height="200"></canvas>
+        <p>In above example, b length can be calculate as </p>
+        <p><code>13<sup>2</sup> = 12<sup>2</sup> + b<sup>2</sup></code></p>
+        <p><code>169 = 144 - b<sup>2</sup></code></p>
+        <p><code>25 = b<sup>2</sup></code></p>
+        <p><code>5 = b</code></p>
     </div>
     
     <script src="../js/geom.js"></script>
@@ -124,6 +156,7 @@
             var colorMain = '#FFF'
             var colorAlt = '#FF6A8F'
             var colorAlt2 = '#000'
+            var colorMainBg = '#FFECF1'
             var points = [0,0, 250,0, 250,150, 0,150, 0,0]
             
             //main
@@ -184,23 +217,87 @@
             var points = [150,0, 300,250, 100,300, 150,0]
             drawPolygon(points,'scalene',colorAlt)
 
-            //ref symmetry
-            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
-            drawPolygon(points,'refsymmetry',colorMain)
-            drawLineDash(170,0,170,240,'refsymmetry',colorAlt2)
-            drawLineDash(0,120,340,120,'refsymmetry',colorAlt2)            
-            //rot symmetry
-            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
-            drawPolygon(points,'rotsymmetry',colorAlt)
-            drawArc(-Math.PI/2, Math.PI/2,50,'rotsymmetry',colorMain)
-            drawArc(-Math.PI/2, 2 * Math.PI,70,'rotsymmetry',colorMain)
-            //diagonals
-            var points = [0,0, 240,0, 240,180, 0,180, 0,0]
-            drawPolygon(points,'diagonals',colorMain)
-            drawText("4",120,215,'diagonals',colorMain)
-            drawText("3",250,110,'diagonals',colorMain)
-            drawLineDash(0,0,240,180,'diagonals',colorAlt2)
-            drawLineDash(240,0,0,180,'diagonals',colorAlt2)
+            //obtuse
+            var points = [200,0, 400,0, 0,200, 200,0]
+            drawPolygon(points,'obtuse',colorMain)
+            drawTextSmaller("135"+String.fromCharCode(176),187,30,'obtuse',colorAlt2)
+            drawArcGivenCenter(200,0,0,Math.PI * 3 / 4,45,'obtuse',colorAlt2)
+
+            // acute
+            val = 150 * Math.sqrt(3)
+            var points = [150,0, 300,val, 0,val, 150,0]
+            drawPolygon(points,'acute',colorAlt)
+            //acute angle measure
+            drawTextSmaller("60"+String.fromCharCode(176),135,50,'acute',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),245,val-12,'acute',colorAlt2)
+            drawTextSmaller("60"+String.fromCharCode(176),20,val-12,'acute',colorAlt2)
+            //acute angles arc
+            drawArcGivenCenter(0,val,-Math.PI / 3, 0,65,'acute',colorAlt2)
+            drawArcGivenCenter(300,val,-Math.PI, -Math.PI * 2 / 3,65,'acute',colorAlt2)
+            drawArcGivenCenter(150,0, Math.PI /3, 2 * Math.PI/3  ,65,'acute',colorAlt2)
+
+            // acute2
+            var points = [0,0, 200,150, 0,200, 0,0]
+            drawPolygon(points,'acute2',colorAlt)
+            //acute angle measure
+            drawTextSmaller("53"+String.fromCharCode(176),5,48,'acute2',colorAlt2)
+            drawTextSmaller("52"+String.fromCharCode(176),140,150,'acute2',colorAlt2)
+            drawTextSmaller("75"+String.fromCharCode(176),5,190,'acute2',colorAlt2)
+            //acute angles arc
+            drawArcGivenCenter(0,0, 0, 2 * Math.PI ,65,'acute2','#FFECF1')
+            drawArcGivenCenter(200,150, 0, 2 * Math.PI ,70,'acute2','#FFECF1')
+            drawArcGivenCenter(0,200, 0, 2 * Math.PI  ,50,'acute2','#FFECF1')
+
+            // right1
+            var points = [0,0, 250,200, 0,200, 0,0]
+            drawPolygon(points,'right1',colorMain)
+            drawArcGivenCenter(0,200,-Math.PI / 2, 0,50,'right1',colorAlt2)
+            drawTextSmaller("90"+String.fromCharCode(176),4,195,'right1',colorAlt2)
+            
+            // right2
+            var points = [0,0, 300,0, 0,200, 0,0]
+            drawPolygon(points,'right2',colorMain)
+            drawArcGivenCenter(0,0, 0, Math.PI / 2, 50,'right2',colorAlt2)
+            drawTextSmaller("90"+String.fromCharCode(176),4,30,'right2',colorAlt2)
+
+            // perimeter
+            var points = [50,0, 200,200, 50,200, 50,0]
+            drawPolygon(points,'perimeter',colorAlt)
+            // side measure
+            drawTextSmaller('4',30,120,'perimeter',colorAlt2)
+            drawTextSmaller('3',110,230,'perimeter',colorAlt2)
+            drawTextSmaller('5',150,120,'perimeter',colorAlt2)
+
+            // area1
+            var points = [100,0, 300,200, 0,200, 100,0]
+            drawPolygon(points,'area1',colorMain)
+            drawLineDash(100,0,100,200,'area1',colorAlt2)
+            drawTextSmaller('20',105,130,'area1',colorAlt2)
+            drawTextSmaller('30',130,225,'area1',colorAlt2)
+
+            // area2
+            var points = [50,0, 200,200, 50,200, 50,0]
+            drawPolygon(points,'area2',colorMain)
+            drawTextSmaller('4',30,120,'area2',colorAlt2)
+            drawTextSmaller('3',110,230,'area2',colorAlt2)
+
+            // pytha1
+            var points = [240,0, 240,180, 0,180, 240,0]
+            drawPolygon(points,'pytha1',colorAlt)
+            drawArcGivenCenter(240,180,0, -Math.PI * 2, 50,'pytha1',colorMainBg)
+            drawTextSmaller("90"+String.fromCharCode(176),203,170,'pytha1',colorAlt2)
+            drawTextSmaller('4',120,201,'pytha1',colorAlt2)
+            drawTextSmaller('3',245,110,'pytha1',colorAlt2)
+            drawTextSmaller('c',110,85,'pytha1',colorAlt2)
+            
+            // pytha2
+            var points = [50,50, 290,50, 50,150, 50,50]
+            drawPolygon(points,'pytha2',colorAlt)
+            drawArcGivenCenter(50,50, 0, Math.PI / 2, 50,'pytha2',colorMainBg)
+            drawTextSmaller("90"+String.fromCharCode(176),54,80,'pytha2',colorAlt2)
+            drawTextSmaller('12',150,45,'pytha2',colorAlt2)
+            drawTextSmaller('b',25,110,'pytha2',colorAlt2)
+            drawTextSmaller('13',150,130,'pytha2',colorAlt2)
         }
         window.onload = draw;        
       </script>
