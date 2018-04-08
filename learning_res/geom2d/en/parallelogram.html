@@ -36,16 +36,18 @@
         <p></p>
         <p>The area of a parallelogram is equals to :</p>
         <p><code> base x height </code></p>
-        <canvas id="area" width="270" height="200"></canvas>
-        <p>Above parallelogram has an area of <code> 5 x 4 = 20 </code> square unit</p>              
+        <canvas id="area" width="300" height="250"></canvas>
+        <p>Above parallelogram has an area of <code>8 x 7 = 56</code> square unit</p>              
     </div>
 
     <a name="Perimeter"></a>
     <div class="scrollblock block-one">
         <h2>Perimeter</h2>
         <p></p>
-        <p>The area of a parallelogram is equals to</p>
+        <p>The perimeter of a parallelogram is equals to</p>
         <p><code> 2 x (base + side length) </code></p>
+        <canvas id="perimeter" width="300" height="150"></canvas>
+        <p>Above parallelogram has a perimeter of <code>2 X (7 + 5) = 24</code> unit</p>
     </div>
 
     <a name="Diagonals"></a>
@@ -96,14 +98,21 @@
             drawArcGivenCenter(230,225,0, 2 * Math.PI,35,'anglesup',colorAlt)
             drawArcGivenCenter(30,225,0, 2 * Math.PI,35,'anglesup',colorAlt)
 
-            //perimeter
-            drawPolygon(points,'perimeter',colorMain)
-            drawText("5",120,185,'perimeter',colorMain)
-            drawText("3",255,90,'perimeter',colorMain)
-            //area
+            // area
+            points = [70,25, 270,25, 230,200, 30,200, 70,25]
             drawPolygon(points,'area',colorAlt)
-            drawText("5",120,185,'area',colorAlt)
-            drawText("3",255,90,'area',colorAlt)
+            drawText("8",120,225,'area',colorAlt2)
+            drawText("7",75,120,'area',colorAlt2)
+            drawLineDash(70,25,70,200,'area',colorAlt2)
+            
+            // perimeter
+            points = [100,25, 275,25, 200,125, 25,125, 100,25]
+            drawPolygon(points,'perimeter',colorMain)
+            drawText("5",40,75,'perimeter',colorMain)
+            drawText("7",115,150,'perimeter',colorMain)
+            
+            
+            
             //ref symmetry
             var points = [20,20, 320,20, 320,220, 20,220, 20,20]
             drawPolygon(points,'refsymmetry',colorMain)
