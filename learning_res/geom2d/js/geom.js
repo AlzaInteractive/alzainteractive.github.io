@@ -1,3 +1,6 @@
+var omega = '\u03A9';
+var alpha = '\u03B1';
+var beta = '\u03B2';
 function drawLineDash (x1, y1, x2, y2, canvasID, color){
     canvas = document.getElementById(canvasID); // right
     context = canvas.getContext('2d');
