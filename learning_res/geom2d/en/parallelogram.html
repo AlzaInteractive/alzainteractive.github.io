@@ -56,19 +56,9 @@
         <p></p>
         <p>The diagonals bisect each other</p>
         <p>They intersect each other exactly at their midpoint</p>
-        <canvas id="rotsymmetry" width="340" height="240"></canvas>
+        <canvas id="diagonals" width="300" height="250"></canvas>
     </div>
 
-    <a name="Diagonals"></a>
-    <div class="scrollblock block-one">
-        <h2>Diagonals</h2>
-        <p></p>        
-        <p>Diagonals of a rectangle is equals to </p>
-        <p><code>&radic;<span style="text-decoration: overline">width<sup>2</sup> + <span style="text-decoration: overline">height<sup>2</sup></span></code></p>
-        <p>(phytagoras formula)</p>
-        <canvas id="diagonals" width="270" height="220"></canvas>
-        <p>Above rectangle has a diagonals of &nbsp;<code>&radic;<span style="text-decoration: overline">4<sup>2</sup> + 3<sup>2</sup> </span></code></p>        
-    </div>
     
     <script src="../js/geom.js"></script>
         
@@ -111,25 +101,12 @@
             drawText("5",40,75,'perimeter',colorMain)
             drawText("7",115,150,'perimeter',colorMain)
             
+            // diagonals
+            points = [70,25, 270,25, 230,200, 30,200, 70,25]
+            drawPolygon(points,'diagonals',colorAlt)
+            drawLineDash(70,25,230,200,'diagonals',colorAlt2)
+            drawLineDash(270,25,30,200,'diagonals',colorAlt2)
             
-            
-            //ref symmetry
-            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
-            drawPolygon(points,'refsymmetry',colorMain)
-            drawLineDash(170,0,170,240,'refsymmetry',colorAlt2)
-            drawLineDash(0,120,340,120,'refsymmetry',colorAlt2)            
-            //rot symmetry
-            var points = [20,20, 320,20, 320,220, 20,220, 20,20]
-            drawPolygon(points,'rotsymmetry',colorAlt)
-            drawArc(-Math.PI/2, Math.PI/2,50,'rotsymmetry',colorMain)
-            drawArc(-Math.PI/2, 2 * Math.PI,70,'rotsymmetry',colorMain)
-            //diagonals
-            var points = [0,0, 240,0, 240,180, 0,180, 0,0]
-            drawPolygon(points,'diagonals',colorMain)
-            drawText("4",120,215,'diagonals',colorMain)
-            drawText("3",250,110,'diagonals',colorMain)
-            drawLineDash(0,0,240,180,'diagonals',colorAlt2)
-            drawLineDash(240,0,0,180,'diagonals',colorAlt2)
         }
         window.onload = draw;        
       </script>
