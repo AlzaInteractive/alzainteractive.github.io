@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Plane (2D) Geometry - Alza Interactive</title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Trapezoid</h1>     
+        <p></p>
+        <p>Trapezoid  (US),  Trapezium (UK)</p>
+        <p>A flat shape with four sides</p>
+        <p>Has at least one pair of parallel sides</p>
+        <canvas id="main1" width="150" height="100"></canvas>
+        &nbsp;
+        <canvas id="main2" width="150" height="100"></canvas>
+        <p></p>
+        <canvas id="main4" width="150" height="100"></canvas>
+        &nbsp;
+        <canvas id="main3" width="150" height="100"></canvas>
+    </div>
+    
+    <a name="baselegheight"></a>
+    <div class="scrollblock block-one">
+        <h2>Bases, legs, height</h2>
+        <p></p>        
+        <p>Parallel sides are called bases</p>
+        <p>Other sides are called legs or lateral sides</p>
+        <p>Distance from base to base is known as height or altitude</p>
+        <canvas id="blh" width="300" height="200"></canvas>
+    </div>
+    
+    <a name="Area"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Area</h2>
+        <p></p>
+        <p>The area is the average of two bases times the height</p>
+        <p><code>1/2 x (b1 + b2) x h</code></p>
+        <canvas id="area" width="300" height="200"></canvas>
+        <p>Above trapezoid has an area of</p> 
+        <p><code>1/2 x (6+2) x 4 = 16</code> square unit</p>              
+    </div>
+
+    <a name="Perimeter"></a>
+    <div class="scrollblock block-one">
+        <h2>Perimeter</h2>
+        <p></p>
+        <p>The perimeter is sum of all sides (bases and legs)</p>
+        <p><code> b1 + b2 + l1 + l2 </code></p>
+        <canvas id="perimeter" width="300" height="200"></canvas>
+        <p>Above trapezoid has a perimeter of </p>
+        <p><code>6 + 3 + 4 + 5 = 18</code> unit of length</p>
+    </div>
+   
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            var colorAlt2 = '#000'
+            var points = [75,0, 150,0, 150,100, 0,100, 75,0]
+            //main
+            drawPolygon(points,'main1',colorAlt)
+            
+            points = [50,0, 100,0, 150,100, 0,100, 50,0]
+            drawPolygon(points,'main2',colorAlt)
+
+            points = [0,0, 150,0, 100,100, 25,100, 0,0]
+            drawPolygon(points,'main3',colorAlt)
+
+            points = [0,0, 75,0, 150,100, 25,100, 0,0]
+            drawPolygon(points,'main4',colorAlt)
+            
+
+            // blh
+            points = [100,0, 200,0, 300,200, 0,200, 100,0]
+            drawPolygon(points,'blh',colorMain)
+            drawText('base',120,190,'blh',colorAlt2)
+            drawText('base',120,25,'blh',colorAlt2)
+            drawText('leg',0,105,'blh',colorAlt2)
+            drawText('leg',260,105,'blh',colorAlt2)
+            drawText('height',103,105,'blh',colorAlt2)
+            drawLineDash(100,0,100,200,'blh',colorAlt2)
+
+            // area
+            drawPolygon(points,'area',colorAlt)
+            drawText('6',140,195,'area',colorAlt2)
+            drawText('2',140,25,'area',colorAlt2)
+            drawText('4',103,115,'area',colorAlt2)
+            drawLineDash(100,0,100,200,'area',colorAlt2)
+            
+            // perimeter
+            points = [150,0, 300,0, 300,200, 0,200, 150,0]
+            drawPolygon(points,'perimeter',colorMain)
+            drawText("5",85,115,'perimeter',colorAlt2)
+            drawText('6',140,195,'perimeter',colorAlt2)
+            drawText('3',225,25,'perimeter',colorAlt2)
+            drawText("4",280,115,'perimeter',colorAlt2)
+            
+            // diagonals
+            points = [70,25, 270,25, 230,200, 30,200, 70,25]
+            drawPolygon(points,'diagonals',colorAlt)
+            drawLineDash(70,25,230,200,'diagonals',colorAlt2)
+            drawLineDash(270,25,30,200,'diagonals',colorAlt2)
+            
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>
