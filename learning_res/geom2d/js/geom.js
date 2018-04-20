@@ -12,6 +12,23 @@ function drawLineDash (x1, y1, x2, y2, canvasID, color){
     context.moveTo(x1,y1);
     context.lineTo(x2, y2);
     context.stroke();
+    context.beginPath();
+}
+function drawPolygonStroke (points,canvasID,color) {
+    canvas = document.getElementById(canvasID); // right
+    context = canvas.getContext('2d');
+    context.setLineDash([1, 0]);
+    context.beginPath();
+    context.imageSmoothingEnabled = false
+    context.moveTo(points[0],points[1]);
+    for (i = 0; i < (points.length-1); i+=2){
+        // console.log(points[i] + ','+ points[i+1])
+        context.lineTo(points[i],points[i+1]);
+    }
+    context.lineWidth = 1;
+    context.strokeStyle = color;
+    context.stroke();
+    context.closePath();    
 }
 function drawPolygon (points,canvasID,color) {
     canvas = document.getElementById(canvasID); // right

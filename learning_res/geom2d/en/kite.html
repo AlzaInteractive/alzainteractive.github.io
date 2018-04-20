@@ -3,19 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Rhombus - Alza Interactive</title>
+	<title>Kite - Alza Interactive</title>
     <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
 	<link rel="stylesheet" href="../../css/style.css" type="text/css">
 </head>
 <body>
     <div class="scrollblock block-title">
-        <h1>Rhombus</h1>     
-        <p>Rhombus has four equal sides.</p>
-        <p>Each opposite sides are parallel to each other</p>
-        <p>Each opposite angles are the same size</p>
+        <h1>Kite</h1>     
+        <p>Kite has four sides.</p>
+        <p>It has two pairs of sides</p>
+        <p>Each pair is made of two adjacent sides with equal length</p>
         <p valign="middle">
-            <canvas id="main1" width="300" height="200"></canvas>
+            <canvas id="main1" width="300" height="250"></canvas>
             &nbsp;
             <canvas id="main2" width="200" height="250"></canvas>
         </p>
@@ -24,18 +24,18 @@
     <a name="Perimeter"></a>
     <div class="scrollblock block-one">
         <h2>Perimeter</h2>
-        <p></p>        
-        <p>Perimeter of a rhombus is equals to </p>
-        <p><code>four times of its side length</code></p>
+        <p></p>
         <canvas id="perimeter" width="320" height="240"></canvas>
-        <p>Above example has a perimeter of &nbsp;<code>4 X s</code></p>        
+        <p>Kite with shorter side x, and longer side y, has a perimeter of:</p>
+        <p><code>x + x + y + y</code> or <code>2(x + y)</code></p>
+                
     </div>
     
     <a name="Area"></a>
     <div class="scrollblock block-one-alt">
         <h2>Area</h2>
         <p></p>
-        <p>Area of a rhombus is equals to</p>
+        <p>Area of a kite is equals to half of its first times its second diagonal</p>
         <p><code>1/2 x diagonal1 x diagonal2</code></p>
         <canvas id="area" width="320" height="240"></canvas>
         <p>Above example has an area of &nbsp;<code>1/2 d1 X d2</code></p>        
@@ -46,7 +46,7 @@
     <div class="scrollblock block-one">
         <h2>Reflectional Symmetry</h2>
         <p></p>
-        <p>Rhombus has <code>two axes</code> of line (reflectional) symmetry</p>
+        <p>Kite has <code>one axes</code> of line (reflectional) symmetry</p>
         <p></p>
         <canvas id="refsymmetry" width="320" height="240"></canvas>
     </div>
@@ -55,7 +55,7 @@
     <div class="scrollblock block-one-alt">
         <h2>Rotational Symmetry</h2>
         <p></p>
-        <p>Rhombus has radial (rotational) symmetry of <code>order 2</code></p>
+        <p>Rhombus has radial (rotational) symmetry of <code>order 1</code></p>
         <p></p>
         <canvas id="rotsymmetry" width="320" height="240"></canvas>
     </div>
@@ -65,7 +65,7 @@
         <h2>Diagonals</h2>
         <p></p>
         <p>Its diagonals cross each other at right angles</p>
-        <p>Each one bisects/cuts rhombus equally in half</p>
+        <p>One of the diagonal bisects/cuts kite equally in half</p>
         <p></p>
         <canvas id="diagonal" width="320" height="240"></canvas>
     </div>
@@ -78,38 +78,40 @@
             var colorAlt = '#FF6A8F'
             var colorAlt2 = '#000'
             //main
-            var points = [150,0, 300,100, 150,200, 0,100, 150,0]
+            var points = [150,0, 300,75, 150,250, 0,75, 150,0]
             drawPolygon(points,'main1',colorAlt)
-            points = [100,0, 200,125, 100,250, 0,125, 100,0]
+            points = [150,0, 200,125, 150,250, 0,125, 150,0]
             drawPolygon(points,'main2',colorAlt)
 
             // perimeter
-            points = [160,0, 320,120, 160,240, 0,120, 160,0]
+            points = [160,0, 320,80, 160,240, 0,80, 160,0]
             drawPolygon(points,'perimeter',colorMain)
-            drawText("s",60,60,'perimeter',colorAlt2)
+            drawTextSmaller("x",32,50,'perimeter',colorAlt2)
+            drawTextSmaller("x",270,50,'perimeter',colorAlt2)
+            drawTextSmaller("y",270,150,'perimeter',colorAlt2)
+            drawTextSmaller("y",32,150,'perimeter',colorAlt2)
 
             //area
             drawPolygon(points,'area',colorAlt)
-            drawText("d1",230,115,'area',colorAlt2)
-            drawText("d2",120,80,'area',colorAlt2)
+            drawText("d1",190,75,'area',colorAlt2)
+            drawText("d2",120,140,'area',colorAlt2)
             drawLineDash(160,0,160,240,'area',colorAlt2)
-            drawLineDash(0,120,320,120,'area',colorAlt2)
+            drawLineDash(0,80,320,80,'area',colorAlt2)
             
             //ref symmetry
             drawPolygon(points,'refsymmetry',colorMain)
             drawLineDash(160,0,160,240,'refsymmetry',colorAlt2)
-            drawLineDash(0,120,320,120,'refsymmetry',colorAlt2)
 
             //rot symmetry
             drawPolygon(points,'rotsymmetry',colorAlt)
-            drawArc(-Math.PI/2, Math.PI/2,50,'rotsymmetry',colorMain)
-            drawArc(-Math.PI/2, 2 * Math.PI,70,'rotsymmetry',colorMain)
+            drawArcGivenCenter(160,100,-Math.PI/2, 2 * Math.PI,50,'rotsymmetry',colorMain)
 
-            //diagonals
+            //ref symmetry
             drawPolygon(points,'diagonal',colorMain)
             drawLineDash(160,0,160,240,'diagonal',colorAlt2)
-            drawLineDash(0,120,320,120,'diagonal',colorAlt2)
-            drawTextSmaller("90"+String.fromCharCode(176),165,116,'diagonal',colorAlt2)
+            drawLineDash(0,80,320,80,'diagonal',colorAlt2)
+            drawTextSmaller("90"+String.fromCharCode(176),165,105,'diagonal',colorAlt2)
+            
 
 
         }
