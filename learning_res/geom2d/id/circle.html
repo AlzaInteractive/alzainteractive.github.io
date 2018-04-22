@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Circle - Alza Interactive</title>
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Circle</h1>     
+        <p>A circle is a round flat shape.</p>
+        <p>Its edge is made of a curved line. </p>
+        <p>All points on the line has equal distance from the center</p>
+        <canvas id="circle1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="circle2" width="200" height="200"></canvas>
+    </div>
+    
+    <a name="Radius"></a>
+    <div class="scrollblock block-one">
+        <h2>Radius</h2>
+        <p></p>
+        <canvas id="radius" width="250" height="250"></canvas>
+        <p>Radius is the distance from the center to the edge of the circle</p>
+        <p>It is usually symbolized with the letter 'r'</p>      
+                
+    </div>
+    
+    <a name="Diameter"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Diameter</h2>
+        <p></p>
+        <canvas id="diameter" width="250" height="250"></canvas>
+        <p>Diameter is a line that cut accross a circle thru it center</p>
+        <p>Diameter is twice the radius</p>
+        <p>It is usually symbolized with the letter 'd'</p>
+                
+    </div>
+
+    <a name="Circumference"></a>
+    <div class="scrollblock block-one">
+        <h2>Circumference</h2>
+        <p></p>
+        <p>The circumference of a circle is the perimeter</p>
+        <p>It is the distance around the edge of the circle</p>
+        <p>Formula for circle circumference are</p>
+        <p><code>&#960; x d</code> or <code>2 x &#960; x r</code></p>
+        <p>where value of <code>&#960;</code> in two decimal places is <code>3.14</code></p>
+        <canvas id="circumference" width="250" height="250"></canvas>
+        <p>Above example has a perimeter of <code> 3.14 x 2 x 7 = 43.96</code> </p>
+    </div>
+
+    
+
+
+
+    <a name="Area"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Area</h2>
+        <p></p>
+        <p>Formula for the circle area are:</p>
+        <p><code> &#960; x r<sup>2</sup> </code> &nbsp; or &nbsp;<code> 1/4 x &#960; x d<sup>2</sup> </code></p>
+        <p></p>
+        <canvas id="area" width="250" height="250"></canvas>
+        <p>Above example has a area of &nbsp;<code>3.14 x 7 x 7 = 153.86</code></p>
+    </div>
+   
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            var colorAlt2 = '#000'
+            //main
+            var radius = 75
+            drawCircle(radius,'circle1',colorAlt)
+            var radius = 100
+            drawCircle(radius,'circle2',colorAlt)
+            
+            // radius
+            radius = 125
+            drawCircle(radius,'radius',colorMain)
+            drawLineDash(125,125,250,125,'radius',colorAlt2)
+            drawTextSmaller("r",185,120,'radius',colorAlt2)
+            radius = 3
+            drawCircle(radius,'radius',colorAlt2)
+
+            // diameter
+            radius = 125
+            drawCircle(radius,'diameter',colorAlt)
+            drawLineDash(125,125,250,125,'diameter',colorAlt2)
+            drawTextSmaller("r",185,120,'diameter',colorAlt2)
+            drawLineDash(125,0,125,250,'diameter',colorMain)
+            drawTextSmaller("d",105,150,'diameter',colorMain)
+            radius = 3
+            drawCircle(radius,'radius',colorAlt2)
+
+            // circumference
+            radius = 125
+            drawCircle(radius,'circumference',colorMain)
+            drawLineDash(125,125,250,125,'circumference',colorAlt2)
+            drawTextSmaller("7",185,120,'circumference',colorAlt2)
+            radius = 3
+            drawCircle(radius,'circumference',colorAlt2)
+
+            // area
+            radius = 125
+            drawCircle(radius,'area',colorAlt)
+            drawLineDash(125,125,250,125,'area',colorAlt2)
+            drawTextSmaller("7",185,120,'area',colorAlt2)
+            radius = 3
+            drawCircle(radius,'area',colorAlt2)
+            
+           
+
+
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>

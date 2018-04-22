@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Parallelogram - Alza Interactive</title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Parallelogram</h1>     
+        <p></p>
+        <p>Parallelogram has four equal sides</p>
+        <p>Opposite sides are  parallel to each other</p>
+        <p>Opposite sides are also equal in lengths</p>
+        <canvas id="main1" width="300" height="250"></canvas>
+        <p><code> AB = DC and AD = BC </code></p>
+    </div>
+    
+    <a name="Angles"></a>
+    <div class="scrollblock block-one">
+        <h2>Angles</h2>
+        <p></p>        
+        <p>Opposite angles are equals</p>
+        <p>Adjacent angles are supplementary, means both add up to 180<sup>o</sup></p>
+        <canvas id="anglesup" width="300" height="250"></canvas>
+        <p><code>&alpha; + &beta; = 180<sup>o</sup></code></p>
+        <p>Parallelogram where all angles are right (90<sup>o</sup>) is a rectangle</p>
+    </div>
+    
+    <a name="Area"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Area</h2>
+        <p></p>
+        <p>The area of a parallelogram is equals to :</p>
+        <p><code> base x height </code></p>
+        <canvas id="area" width="300" height="250"></canvas>
+        <p>Above parallelogram has an area of <code>8 x 7 = 56</code> square unit</p>              
+    </div>
+
+    <a name="Perimeter"></a>
+    <div class="scrollblock block-one">
+        <h2>Perimeter</h2>
+        <p></p>
+        <p>The perimeter of a parallelogram is equals to</p>
+        <p><code> 2 x (base + side length) </code></p>
+        <canvas id="perimeter" width="300" height="150"></canvas>
+        <p>Above parallelogram has a perimeter of <code>2 X (7 + 5) = 24</code> unit</p>
+    </div>
+
+    <a name="Diagonals"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Diagonals</h2>
+        <p></p>
+        <p>The diagonals bisect each other</p>
+        <p>They intersect each other exactly at their midpoint</p>
+        <canvas id="diagonals" width="300" height="250"></canvas>
+    </div>
+
+    
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            var colorAlt2 = '#000'
+            var points = [70,25, 270,25, 230,225, 30,225, 70,25]
+            //main
+            drawPolygon(points,'main1',colorAlt)
+            drawText("A",45,30,'main1',colorAlt2)
+            drawText("B",275,30,'main1',colorAlt2)
+            drawText("C",235,235,'main1',colorAlt2)
+            drawText("D",0,235,'main1',colorAlt2)
+            
+            // anglesup
+            drawPolygon(points,'anglesup',colorMain)
+            
+            drawText(alpha,70,50,'anglesup',colorAlt)
+            drawText(beta,250,50,'anglesup',colorAlt)
+            drawText(alpha,210,220,'anglesup',colorAlt)
+            drawText(beta,35,220,'anglesup',colorAlt)
+            
+            drawArcGivenCenter(70,25,0, 2 * Math.PI,35,'anglesup',colorAlt)
+            drawArcGivenCenter(270,25,0, 2 * Math.PI,35,'anglesup',colorAlt)
+            drawArcGivenCenter(230,225,0, 2 * Math.PI,35,'anglesup',colorAlt)
+            drawArcGivenCenter(30,225,0, 2 * Math.PI,35,'anglesup',colorAlt)
+
+            // area
+            points = [70,25, 270,25, 230,200, 30,200, 70,25]
+            drawPolygon(points,'area',colorAlt)
+            drawText("8",120,225,'area',colorAlt2)
+            drawText("7",75,120,'area',colorAlt2)
+            drawLineDash(70,25,70,200,'area',colorAlt2)
+            
+            // perimeter
+            points = [100,25, 275,25, 200,125, 25,125, 100,25]
+            drawPolygon(points,'perimeter',colorMain)
+            drawText("5",40,75,'perimeter',colorMain)
+            drawText("7",115,150,'perimeter',colorMain)
+            
+            // diagonals
+            points = [70,25, 270,25, 230,200, 30,200, 70,25]
+            drawPolygon(points,'diagonals',colorAlt)
+            drawLineDash(70,25,230,200,'diagonals',colorAlt2)
+            drawLineDash(270,25,30,200,'diagonals',colorAlt2)
+            
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>

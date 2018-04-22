@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Bangun Datar - Alza Interactive</title>
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Pengenalan</h1>     
+        <p>Bangun datar adalah suatu bidang datar</p>
+        <p>Bangun datar dibatasi oleh garis atau lengkungan yang disebut sisi</p>
+        <p>Bangun datar memiliki 2 dimensi</p>        
+    </div>
+    
+    <a name="square"></a>
+    <div class="scrollblock block-one">
+        <h2>Persegi</h2>
+        <p></p>
+        <canvas id="square" width="200" height="200">
+        </canvas>
+        <p>Persegi dikelilingi oleh 4 sisi yang sama panjang</p>
+        <p>Setiap sudut persegi memiliki besar (90<sup>o</sup>)</p>
+        <p>Setiap sisi yang berlawanan sejajar</p>
+    </div>
+    
+    <a name="rectangle"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Persegi Panjang</h2>
+        <p></p>
+        <canvas id="rectangle1" width="150" height="200">
+        </canvas> &nbsp;
+        <canvas id="rectangle2" width="250" height="200">
+        </canvas>
+        <p>Persegi panjang memiliki 4 sisi </p>
+        <p>Sisi yang berlawanan memiliki panjang yang sama</p>
+        <p>Sisi yang berlawanan sejajar satu sama lain</p>
+        <p>Setiap sudut persegi panjang memiliki besar (90<sup>o</sup>)</p>        
+    </div>
+
+    <a name="Segitiga"></a>
+    <div class="scrollblock block-one">
+        <h2>Segitiga</h2>
+        <p></p>
+        <canvas id="triangle1" width="100" height="200"></canvas>
+        &nbsp;
+        <canvas id="triangle3" width="100" height="200"></canvas>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <canvas id="triangle2" width="100" height="200"></canvas>
+        <p>Segitiga memiliki 3 sisi</p>
+        <p>Jumlah semua sudut segitiga adalah (180<sup>o</sup>)</p>
+    </div>
+
+    <a name="Paralellogram"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Jajaran Genjang</h2>
+        <p></p>
+        <canvas id="parallelogram1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="parallelogram2" width="200" height="200"></canvas>
+        <p>Jajaran genjang memiliki 4 sisi</p>
+        <p>Sisi-sisi yang berlawanan sejajar dan memiliki panjang yang sama</p>
+    </div>
+
+    <a name="Trapezoid"></a>
+    <div class="scrollblock block-one">
+        <h2>Trapesium</h2>
+        <p></p>
+        <canvas id="trapezoid1" width="200" height="200"></canvas>
+        &nbsp;&nbsp;
+        <canvas id="trapezoid2" width="200" height="200"></canvas>
+        <p>Trapesium memiliki 4 sisi</p>
+        <p>Memiliki sepasang sisi yang sejajar</p>
+    </div>
+
+    <a name="Rhombus"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Belah Ketupat</h2>
+        <p></p>
+        <canvas id="rhombus1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="rhombus2" width="250" height="200"></canvas>
+        <p>Belah ketupat memiliki 4 sisi dengan panjang sama</p>
+        <p>Sisi yang berlawanan sejajar</p>
+    </div>
+
+    <a name="Kite"></a>
+    <div class="scrollblock block-one">
+        <h2>Layang-layang</h2>
+        <p></p>
+        <canvas id="kite1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="kite2" width="250" height="200"></canvas>
+        <p>Bentuknya menyerupai layang-layang</p>
+        <p>Memiliki dua pasangan sisi dengan panjang yang sama</p>
+    </div>
+
+    <a name="Circle"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Lingkaran</h2>
+        <p></p>
+        <canvas id="circle1" width="150" height="200"></canvas>
+        &nbsp;
+        <canvas id="circle2" width="200" height="200"></canvas>        
+        <p>Lingkaran adalah bangun datar dengan sisi yang melingkar</p>
+        <p>Jarak dari titik pusat lingkaran ke sisinya selalu sama</p>
+        
+    </div>
+    <script src="../js/geom.js"></script>
+        
+    <script>       
+        function draw(){
+            var colorMain = '#FFF'
+            var colorAlt = '#FF6A8F'
+            var colorAlt2 = '#000'
+            // square
+            var points = [0,0, 200,0, 200,200, 0,200, 0,0]
+            drawPolygon(points,'square',colorMain)
+            // rectangle 
+            var points = [0,0, 150,0, 150,200, 0,200, 0,0]
+            drawPolygon(points,'rectangle1',colorAlt)
+            var points = [0,0, 250,0, 250,200, 0,200, 0,0]
+            drawPolygon(points,'rectangle2',colorAlt)
+            // triangle
+            var points = [0,200, 50,0, 100,200, 0,200]
+            drawPolygon(points,'triangle1',colorMain)
+            var points = [0,0, 100,200, 0,200, 0,0]
+            drawPolygon(points,'triangle2',colorMain)
+            var points = [150,0, 100,200, 0,75, 150,0]
+            drawPolygon(points,'triangle3',colorMain)
+            // paralellogram
+            var points = [0,0, 150,0, 200,200, 50,200, 0,0]
+            drawPolygon(points,'parallelogram1',colorAlt)
+            var points = [0,50, 200,0, 250,150, 0,200, 0,50]
+            drawPolygon(points,'parallelogram2',colorAlt)
+            // trapezoid
+            var points = [0,0, 150,0, 200,200, 0,200, 0,0]
+            drawPolygon(points,'trapezoid1',colorMain)
+            var points = [50,0, 150,0, 200,200, 0,200, 50,0]
+            drawPolygon(points,'trapezoid2',colorMain)
+            // rhombus
+            var points = [75,0, 150,100, 75,200, 0,100, 75,0]
+            drawPolygon(points,'rhombus1',colorAlt)
+            var points = [125,0, 250,100, 125,200, 0,100, 125,0]
+            drawPolygon(points,'rhombus2',colorAlt)
+            // kite
+            var points = [75,0, 150,50, 75,200, 0,50, 75,0]
+            drawPolygon(points,'kite1',colorMain)
+            var points = [75,0, 250,100, 75,200, 0,100, 75,0]
+            drawPolygon(points,'kite2',colorMain)
+            // circle
+            var radius = 75
+            drawCircle(radius,'circle1',colorAlt)
+            var radius = 100
+            drawCircle(radius,'circle2',colorAlt)
+        }
+        window.onload = draw;        
+      </script>
+    
+    </body>
+</html>
