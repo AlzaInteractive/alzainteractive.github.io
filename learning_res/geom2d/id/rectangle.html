@@ -3,69 +3,68 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Rectangle - Alza Interactive</title>
+	<title>Persegi Panjang - Alza Interactive</title>
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
 	<link rel="stylesheet" href="../../css/style.css" type="text/css">
 </head>
 <body>
     <div class="scrollblock block-title">
-        <h1>Rectangle</h1>     
-        <p>Square is a flat shape with four sides.</p>
-        <p>Each corner is a right angle (90<sup>o</sup>)</p>
-        <p>Each opposite sides has the same length to each other</p>
-        <p>Each opposite sides are parallel to each other</p>
+        <h1>Persegi Panjang</h1>     
+        <p>Memiliki 4 sisi</p>
+        <p>Memiliki 4 sudut, masing-masing (90<sup>o</sup>)</p>
+        <p>Sisi-sisi berlawanan sejajar dan sama panjang</p>
         <canvas id="main" width="270" height="200"></canvas>
     </div>
     
     <a name="Perimeter"></a>
     <div class="scrollblock block-one">
-        <h2>Perimeter</h2>
+        <h2>Keliling</h2>
         <p></p>        
-        <p>Perimeter of a rectangle is equals to </p>
-        <p><code>two times the width + two times the height</code><p> OR </p><p><code>two times  ( width + height )</code></p>
+        <p>Rumus keliling persegi panjang adalah:</p>
+        <p><code>2 x panjang + 2 x lebar</code><p> OR </p><p><code>2 x  ( panjang + lebar )</code></p>
         <canvas id="perimeter" width="270" height="200"></canvas>
-        <p>Above rectangle has a perimeter of &nbsp;<code>2 X (5 + 3) </code></p>        
+        <p>Contoh di atas memiliki keliling &nbsp;<code>2 X (5 + 3) </code></p>        
     </div>
     
     <a name="Area"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Area</h2>
+        <h2>Luas</h2>
         <p></p>
-        <p>Area of a rectangle is equals to</p>
-        <p><code>width x height</code></p>
+        <p>Rumus luas persegi panjang adalah:</p>
+        <p><code>panjang x lebar</code></p>
         <canvas id="area" width="270" height="200"></canvas>
-        <p>Above rectangle has an area of &nbsp;<code>5 X 3</code></p>        
+        <p>Contoh di atas memiliki luas &nbsp;<code>5 X 3</code></p>        
                 
     </div>
 
     <a name="Reflectional Symmetry"></a>
     <div class="scrollblock block-one">
-        <h2>Reflectional Symmetry</h2>
+        <h2>Simetri Lipat</h2>
         <p></p>
-        <p>A square has <code>two axes</code> of line (reflectional) symmetry</p>
+        <p>Persegi panjang memiliki <code>dua sumbu</code> simetri lipat</p>
         <p></p>
         <canvas id="refsymmetry" width="340" height="240"></canvas>
     </div>
 
     <a name="Rotational Symmetry"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Rotational Symmetry</h2>
+        <h2>Simetri Putar</h2>
         <p></p>
-        <p>A square has radial (rotational) symmetry of <code>order 2</code></p>
+        <p>Persegi panjang memiliki simetri putar <code>tingkat 2</code></p>
         <p></p>
         <canvas id="rotsymmetry" width="340" height="240"></canvas>
     </div>
 
     <a name="Diagonals"></a>
     <div class="scrollblock block-one">
-        <h2>Diagonals</h2>
+        <h2>Diagonal</h2>
         <p></p>        
-        <p>Diagonals of a rectangle is equals to </p>
-        <p><code>&radic;<span style="text-decoration: overline">width<sup>2</sup> + <span style="text-decoration: overline">height<sup>2</sup></span></code></p>
-        <p>(phytagoras formula)</p>
+        <p>Panjang diagonal sebuah persegi panjang adalah:</p>
+        <p><code>&radic;<span style="text-decoration: overline">panjang<sup>2</sup> + <span style="text-decoration: overline">lebar<sup>2</sup></span></code></p>
+        <p>(pythagoras formula)</p>
         <canvas id="diagonals" width="270" height="220"></canvas>
-        <p>Above rectangle has a diagonals of &nbsp;<code>&radic;<span style="text-decoration: overline">4<sup>2</sup> + 3<sup>2</sup> </span></code></p>        
+        <p>Panjang diagonal dari persegi panjang di atas adalah &nbsp;<code>&radic;<span style="text-decoration: overline">4<sup>2</sup> + 3<sup>2</sup> </span></code></p>        
     </div>
     
     <script src="../js/geom.js"></script>
@@ -78,8 +77,8 @@
             var points = [0,0, 250,0, 250,150, 0,150, 0,0]
             //main
             drawPolygon(points,'main',colorAlt)
-            drawText("w",120,180,'main',colorAlt2)
-            drawText("h",252,85,'main',colorAlt2)
+            drawText("p",120,180,'main',colorAlt2)
+            drawText("l",252,85,'main',colorAlt2)
             //perimeter
             drawPolygon(points,'perimeter',colorMain)
             drawText("5",120,185,'perimeter',colorMain)
