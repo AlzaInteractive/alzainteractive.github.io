@@ -3,16 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Triangle - Alza Interactive</title>
+	<title>Segitiga - Alza Interactive</title>
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
 	<link rel="stylesheet" href="../../css/style.css" type="text/css">
 </head>
 <body>
     <div class="scrollblock block-title">
-        <h1>Triangle</h1>     
-        <p>Triangle is a flat shape with three sides.</p>
-        <p>Triangle has three (tri) angles </p>
+        <h1>Segitiga</h1>     
+        <p>Sesuai namanya, segitiga memiliki tiga sisi</p>
+        <p>Memiliki tiga sudut yang jika dijumlahkan besarnya 180<sup>o</sup></p>
         <p>
         <canvas id="triangle1" width="100" height="200"></canvas>
         &nbsp;
@@ -24,86 +24,86 @@
     
     <a name="classlength"></a>
     <div class="scrollblock block-one">
-        <h2>Classification by sides length</h2>
+        <h2>Jenis berdasarkan perbandingan sisi</h2>
         <p></p>
-        <p>Based on the length ratio of its three sides, a triangle can be either :</p>        
-        <p><code>equilateral, iscosceles, or scalene</code></p>
+        <p>Berdasarkan perbandingan panjang sisi-sisinya, sebuah segitiga dapat berupa:</p>        
+        <p><code>sama sisi, sama kaki, atau sembarang</code></p>
     </div>  
     
     <a name="equilateral"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Equilateral Triangle</h2>
+        <h2>Segitiga sama sisi</h2>
         <p></p>
-        <p>Equilateral triangle has all sides with equal length</p>
-        <p>Consequently, each angles is <code>180<sup>o</sup>/3 = 60<sup>o</sup></code></p>
-        <p>It has rotational symmetry of  <code>order 3 </code></p>
-        <p>It also has reflectional symmetry in <code>3 axes </code></p>
+        <p>Ketiga sisinya sama panjang</p>
+        <p>Setiap sudut segitiga besarnya <code>180<sup>o</sup>/3 = 60<sup>o</sup></code></p>
+        <p>Memiliki simetri putar  <code>tingkat 3 </code></p>
+        <p>Memiliki simetri lipat pada <code>3 sumbu </code></p>
         <canvas id="equilateral" width="300" height="300"></canvas>
     </div>
 
     <a name="iscosceles"></a>
     <div class="scrollblock block-one">
-        <h2>Iscosceles Triangle</h2>
+        <h2>Segitiga sama kaki</h2>
         <p></p>
-        <p>Equilateral triangle has two sides with equal length</p>
-        <p>It has <code>order 1</code>  rotational symmetry</p>
-        <p>Reflectional symmetry in <code>1 axes </code></p>
+        <p>Dua dari tiga sisinya sama panjang</p>
+        <p>Memiliki simetri putar <code>tingkat 1</code></p>
+        <p>Memiliki simetri lipat pada <code>1 sumbu </code></p>
         <canvas id="iscosceles" width="200" height="300"></canvas>
                 
     </div>
 
     <a name="scalene"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Scalene Triangle</h2>
+        <h2>Segitiga sembarang</h2>
         <p></p>
-        <p>Scalene triangle has all 3 sides with unequal lengths</p>
-        <p>It has rotational symmetry of  <code>order 1 </code></p>
-        <p>It has <code>zero (no)</code> axis of reflectional symmetry </p>
+        <p>Ketiga sisinya memiliki panjang berbeda</p>
+        <p>Memiliki simetri putar  <code>tingkat 1 </code></p>
+        <p>Tidak memiliki simetri lipat </p>
         <canvas id="scalene" width="300" height="300"></canvas>
     </div>
 
     <a name="anglesum"></a>
     <div class="scrollblock block-one">
-        <h2>Sum of all angles</h2>
+        <h2>Sudut-sudut segitiga</h2>
         <p></p>        
-        <p>For any given triangle, the sum off all angles is always add up to <code>180<sup>o</sup></code></p>
+        <p>Seluruh sudut sebuah segitiga, bila dijumlahkan hasilnya akan selalu <code>180<sup>o</sup></code></p>
         <canvas id="sumangles" width="300" height="300"></canvas>
         <canvas id="sumangles2" width="300" height="300"></canvas>
     </div>
 
     <a name="classangle"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Classification by angles sizes</h2>
+        <h2>Jenis berdasarkan sudut</h2>
         <p></p>
-        <p>Based on the size of its three angles, a triangle can be either :</p>        
-        <p><code>obtuse, acute, or right</code></p>
+        <p>Berdasarkan ukuran sudutnya, sebuah segitiga dapat tergolong:</p>        
+        <p><code>tumpul, lancip, atau siku-siku</code></p>
     </div>
 
     <a name="obtuse"></a>
     <div class="scrollblock block-one">
-        <h2>Obtuse</h2>
+        <h2>Segitiga tumpul</h2>
         <p></p>
-        <p>An obtuse triangle has one angle with size larger than 90<sup>o</sup></p>
+        <p>Segitiga tumpul memiliki salah satu sudut lebih besar dari 90<sup>o</sup></p>
         <p></p>
         <canvas id="obtuse" width="400" height="200"></canvas>
     </div>
 
     <a name="acute"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Acute</h2>
+        <h2>Segitiga lancip</h2>
         <p></p>
-        <p>An acute triangle has all 3 angles with size less than 90<sup>o</sup></p>
+        <p>Segitiga dikatakan lancip bila seluruh sudutnya lebih kecil dari 90<sup>o</sup></p>
         <canvas id="acute2" width="200" height="200"></canvas>
-        <p>An equilateral triangle is an example of acute triangle</p>
+        <p>Segitiga sama sisi adalah salah satu contoh segitiga lancip</p>
         <canvas id="acute" width="300" height="300"></canvas>
         
     </div>
 
     <a name="right"></a>
     <div class="scrollblock block-one">
-        <h2>Right</h2>
+        <h2>Segitiga siku-siku</h2>
         <p></p>
-        <p>A right triangle has one angle with size exactly 90<sup>o</sup></p>
+        <p>Segitiga siku-siku memiliki salah satu sudut dengan besar 90<sup>o</sup></p>
         <p></p>
         <canvas id="right1" width="300" height="200"></canvas>
         <canvas id="right2" width="300" height="200"></canvas>
@@ -111,38 +111,39 @@
 
     <a name="perimeter"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Perimeter</h2>
+        <h2>Keliling</h2>
         <p></p>
-        <p>Perimeter of a triangle is the sum of its sides</p>
+        <p>Keliling segitiga adalah jumlah panjang sisi-sisinya</p>
         <canvas id="perimeter" width="250" height="250"></canvas>
-        <p>above triangle has a perimeter of <code>3+4+5=12</code> unit of length</p>
+        <p>Contoh di atas memiliki keililing <code>3+4+5=12</code> satuan panjang</p>
     </div>
 
     <a name="area"></a>
     <div class="scrollblock block-one">
-        <h2>Area</h2>
+        <h2>Luas</h2>
         <p></p>
-        <p>Area of a triangle equals to <code>1/2 x base x height</code></p>
+        <p>Luas segitiga adalah <code>1/2 x alas x tinggi</code></p>
         <p></p>
         <canvas id="area1" width="300" height="240"></canvas>
         <canvas id="area2" width="250" height="240"></canvas>
-        <p>Triangle on the left has <code>1/2 x 30 x 20 = 300 square unit of area</code>,</p>
-        <p>while triangle on the right has <code>1/2 x 3 x 4 = 6 square unit of area</code></p>
+        <p>Contoh di kiri memiliki luas <code>1/2 x 30 x 20 = 300</code> satuan luas</p>
+        <p>Contoh di kanan memiliki <code>1/2 x 3 x 4 = 6</code> satuan luas</p>
     </div>
 
     <a name="pythagoras"></a>
     <div class="scrollblock block-one-alt">
-        <h2>Pythagorean Triples</h2>
+        <h2>Teorema pythagoras</h2>
         <p></p>
-        <p>Pythagorean triples are integers solution that satisfy the pythagorean theorem where</p>
+        <p>Teorema pytahgoras berlaku pada segitiga siku-siku dimana</p>
         <p><code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code></p>
-        <p>In a right triangle, a and b are the two adjacent sides with 90<sup>o</sup> or right angle, </p><p>while c are the hypotenuse (the longest side, opposite of the right angle)</p>
+        <p>a dan b adalah sisi yang mengapit sudut siku-siku,</p>
+        <p>sementara c adalah sisi miring(sisi terpanjang)</p>
         <canvas id="pytha1" width="300" height="200"></canvas>
-        <p>In above example, c length can be calculate as </p>
+        <p>Pada contoh di atas, panjang c dapat dicari dengan </p>
         <p><code>c<sup>2</sup> = 3<sup>2</sup> + 4<sup>2</sup> = 25</code></p>
         <p><code>c = 5</code></p>
         <canvas id="pytha2" width="300" height="200"></canvas>
-        <p>In above example, b length can be calculate as </p>
+        <p>Pada contoh di atas, panjang b dapat dicari dengan </p>
         <p><code>13<sup>2</sup> = 12<sup>2</sup> + b<sup>2</sup></code></p>
         <p><code>169 = 144 - b<sup>2</sup></code></p>
         <p><code>25 = b<sup>2</sup></code></p>
