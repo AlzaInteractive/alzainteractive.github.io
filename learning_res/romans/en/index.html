@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Roman Numerals - Alza Interactive</title>
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Introduction</h1>     
+        <p>Roman numerals originated in ancient Rome</p>
+        <p>Numbers represented by combinations of letters from the alphabet</p>
+        <p>Roman numerals, as used today, are based on seven symbols:</p>
+        <table class="center">
+            <tr>
+                <th>Symbol</th>
+                <th>I</th>
+                <th>V</th>
+                <th>X</th>
+                <th>L</th>
+                <th>C</th>
+                <th>D</th>
+                <th>M</th>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>1</td>
+                <td>5</td>
+                <td>10</td>
+                <td>50</td>
+                <td>100</td>
+                <td>500</td>
+                <td>1000</td>
+            </tr>
+        </table>
+           
+    </div>
+    
+    <a name="combinations"></a>
+    <div class="scrollblock block-one">
+        <h2>Basic Combinations</h2>
+        <p>Counting by 1</p>
+        <table class="center">
+            <tr>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>IV</th>
+                <th>V</th>
+                <th>VI</th>
+                <th>VII</th>
+                <th>VIII</th>
+                <th>IX</th>
+                <th>X</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </table>
+        
+        <p>Counting by 10</p>
+        <table class="center">
+            <tr>
+                <th>X</th>
+                <th>XX</th>
+                <th>XXX</th>
+                <th>XL</th>
+                <th>L</th>
+                <th>LX</th>
+                <th>LXX</th>
+                <th>LXXX</th>
+                <th>XC</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+                <td>50</td>
+                <td>60</td>
+                <td>70</td>
+                <td>80</td>
+                <td>90</td>
+                <td>100</td>
+            </tr>
+        </table>
+
+        <p>Counting by 100</p>
+        <table class="center">
+            <tr>
+                <th>C</th>
+                <th>CC</th>
+                <th>CCC</th>
+                <th>CD</th>
+                <th>D</th>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+                <td>400</td>
+                <td>500</td>
+            </tr>
+        </table>
+        <table class="center">
+            <tr>
+                <th>DC</th>
+                <th>DCC</th>
+                <th>DCCC</th>
+                <th>CM</th>
+                <th>M</th>
+            </tr>
+            <tr>
+                <td>600</td>
+                <td>700</td>
+                <td>800</td>
+                <td>900</td>
+                <td>1000</td>
+            </tr>
+        </table>
+    </div>
+    
+    <a name="rules"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Rules</h2>
+        
+        <p>If a symbol appear after a larger/equal symbol, it is added</p>
+        <p>Example 1: <code>VI = V + I = 5 + 1 = 6</code></p>
+        <p>Example 2: <code>XX = X + X = 10 + 10 = 20</code></p>
+        <p>Example 3: <code>CLX = C + L + X = 100 + 50 + 10 = 160</code></p>
+        <p>&nbsp;</p>
+        <p>If a symbol appear after a lesser symbol, it is subtracted by the lesser symbol</p>
+        <p>Example 1: <code>IV = V - I = 5 - 1 = 4</code></p>
+        <p>Example 2: <code>IX = X - I = 10 - 1 = 9</code></p>
+        <p>Example 3: <code>CIX = C + X - I = 100 + 10 - 1 = 119</code></p>
+    </div>
+
+    <a name="convert_to"></a>
+    <div class="scrollblock block-one">
+        <h2>Convert to romans</h2>
+        <p>How to convert modern number to romans</p>
+        <table class="center">
+            <tr>
+                <th rowspan=2>Step</th>
+                <th colspan=3>Example</th>
+            </tr>
+            <tr>
+                <th>73</th>
+                <th>139</th>
+                <th>2456</th>
+            </tr>
+            <tr>
+                <td>Split </td>
+                <td>70 + 3</td>
+                <td>100 + 30 + 9</td>
+                <td>2000 + 400 + 50 + 6</td>
+            </tr>
+            <tr>
+                <td>Convert parts</td>
+                <td>LXX + III</td>
+                <td>C + XXX + IX</td>
+                <td>MM + CD + L + VI</td>
+            </tr>
+            <tr>
+                <td>Final result</td>
+                <td>LXXIII</td>
+                <td>CIX</td>
+                <td>MMCDLVI</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <a name="convert_from"></a>
+    <div class="scrollblock block-one-alt">
+        <h2>Convert from romans</h2>
+        <p>How to convert romans to modern number</p>
+        <table class="center">
+            <tr>
+                <th rowspan=2>Step</th>
+                <th colspan=3>Example</th>
+            </tr>
+            <tr>
+                <th>LXXXIV</th>
+                <th>CMXLVII</th>
+                <th>MMXVIII</th>
+            </tr>
+            <tr>
+                <td>Split </td>
+                <td>L + X + X + X - I + V</td>
+                <td>-C + M - X + L + V + I + I</td>
+                <td>M + M + X + V + I + I + I</td>
+            </tr>
+            <tr>
+                <td>Convert parts</td>
+                <td>50 + 10 + 10 + 10 -1 + 5</td>
+                <td>-100 + 1000 - 10 + 50 + 5 + 1 + 1</td>
+                <td>1000 + 1000 + 10 + 5 + 1 + 1 + 1</td>
+            </tr>
+            <tr>
+                <td>Final result</td>
+                <td>84</td>
+                <td>947</td>
+                <td>2018</td>
+            </tr>
+        </table>
+    </div> 
+    </body>
+</html>
