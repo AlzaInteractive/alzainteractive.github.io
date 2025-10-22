@@ -1,0 +1,41 @@
+version = 1
+Makhluk Hidup: Ani melihat seekor kucing yang sedang makan ikan. Apakah kucing termasuk hewan karnivor, herbivor, atau omnivor? Jelaskan.
+Benda dan Sifatnya: Ibu membeli gelas kaca dan gelas plastik. Mana yang lebih mudah pecah, dan mengapa?
+Energi dan Perubahannya: Lampu di kamar Budi menyala setelah ia menekan sakelar. Apa sumber energi yang membuat lampu menyala?
+Lingkungan: Rina membuang sampah plastik ke sungai. Apa akibatnya bagi lingkungan sekitar?
+Makhluk Hidup: Sebuah pohon mangga tumbuh tinggi dan berdaun lebat. Apa yang dibutuhkan pohon tersebut agar bisa tumbuh dengan baik?
+Benda dan Sifatnya: Andi memiliki balon berisi gas helium. Mengapa balon itu bisa melayang di udara?
+Energi dan Perubahannya: Ayah menggunakan setrika untuk menyetrika baju. Apa jenis energi yang diubah menjadi panas pada setrika?
+Bumi dan Alam Semesta: Siti melihat langit cerah di pagi hari, tetapi hujan di sore hari. Apa yang menyebabkan perubahan cuaca tersebut?
+Makhluk Hidup: Budi memelihara ikan di akuarium. Apa yang harus diberikan agar ikan tetap hidup sehat?
+Lingkungan: Di desa Ani, banyak pohon ditebang untuk membuat jalan. Apa yang bisa dilakukan untuk menjaga keseimbangan lingkungan?
+Benda dan Sifatnya: Ibu memasak air menggunakan panci logam. Mengapa panci logam cepat panas dibandingkan panci plastik?
+Energi dan Perubahannya: Sepeda Rudi bergerak setelah ia mengayuhnya. Apa jenis energi yang digunakan Rudi untuk menggerakkan sepeda?
+Makhluk Hidup: Seekor kelinci memakan wortel setiap hari. Termasuk jenis hewan apakah kelinci berdasarkan makanannya?
+Bumi dan Alam Semesta: Andi mengamati bulan purnama di malam hari. Mengapa bentuk bulan terlihat berubah-ubah setiap malam?
+Lingkungan: Di sekolah, Budi melihat banyak sampah kertas berserakan. Bagaimana cara memisahkan sampah kertas agar bisa didaur ulang?
+Benda dan Sifatnya: Siti meletakkan es batu di luar rumah, dan es batu mencair. Apa yang menyebabkan es batu berubah menjadi air?
+Energi dan Perubahannya: Ibu menyalakan kompor gas untuk memasak. Apa sumber energi yang digunakan kompor tersebut?
+Makhluk Hidup: Di kebun, Ani melihat kupu-kupu hinggap di bunga. Apa peran kupu-kupu bagi bunga tersebut?
+Bumi dan Alam Semesta: Matahari terbit di timur setiap pagi. Apa yang menyebabkan matahari tampak bergerak di langit?
+Lingkungan: Rudi menanam pohon di halaman rumahnya. Bagaimana pohon tersebut membantu menjaga udara tetap bersih?
+Makhluk Hidup: Ibu membeli ikan lele untuk dimasak. Apakah ikan lele termasuk hewan yang hidup di air atau darat? Jelaskan.
+Benda dan Sifatnya: Andi memegang sendok logam yang baru saja digunakan untuk mengaduk teh panas. Mengapa sendok itu terasa panas?
+Energi dan Perubahannya: Budi menyalakan senter untuk menerangi jalan di malam hari. Apa sumber energi yang membuat senter menyala?
+Lingkungan: Di dekat rumah Siti, ada genangan air kotor yang berbau. Apa yang bisa menyebabkan genangan itu berbahaya bagi kesehatan?
+Makhluk Hidup: Seorang petani menanam padi di sawah. Apa yang dibutuhkan tanaman padi agar bisa tumbuh dengan baik?
+Benda dan Sifatnya: Rina menuangkan air ke dalam botol plastik dan botol kaca. Mengapa botol kaca lebih berat dibandingkan botol plastik?
+Energi dan Perubahannya: Ayah menggunakan kipas angin untuk mendinginkan ruangan. Apa jenis energi yang diubah menjadi gerakan pada kipas angin?
+Bumi dan Alam Semesta: Ani melihat pelangi setelah hujan reda. Apa yang menyebabkan pelangi muncul di langit?
+Makhluk Hidup: Budi memelihara kelinci di kandang. Apa yang harus diberikan kepada kelinci agar tetap sehat?
+Lingkungan: Di taman sekolah, banyak daun kering berserakan. Apa yang bisa dilakukan untuk menjaga kebersihan taman?
+Benda dan Sifatnya: Ibu meletakkan mentega di atas meja, dan mentega mulai mencair. Apa yang menyebabkan mentega berubah dari padat menjadi cair?
+Energi dan Perubahannya: Rudi bermain layang-layang di lapangan. Apa jenis energi yang membuat layang-layang bisa terbang?
+Makhluk Hidup: Seekor kambing memakan rumput di ladang. Termasuk jenis hewan apakah kambing berdasarkan makanannya?
+Bumi dan Alam Semesta: Siti mengamati bintang di malam hari menggunakan teropong. Mengapa bintang terlihat berkelap-kelip?
+Lingkungan: Di desa Budi, air sungai mulai keruh karena limbah rumah tangga. Apa yang bisa dilakukan untuk menjaga kebersihan sungai?
+Benda dan Sifatnya: Andi meniup balon hingga mengembang. Apa yang menyebabkan balon bisa membesar saat ditiup?
+Energi dan Perubahannya: Ibu memanaskan air menggunakan kompor listrik. Apa sumber energi yang digunakan untuk memanaskan air?
+Makhluk Hidup: Di kebun, Rina melihat lebah mengumpulkan nektar dari bunga. Apa manfaat lebah bagi tanaman bunga?
+Bumi dan Alam Semesta: Matahari terbenam di barat setiap sore. Apa yang menyebabkan matahari tampak bergerak di langit?
+Lingkungan: Ani menanam pohon mangga di halaman rumah. Bagaimana pohon mangga membantu mengurangi polusi udara?
