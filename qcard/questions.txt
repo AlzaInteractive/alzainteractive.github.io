@@ -1,4 +1,4 @@
-version = 1
+1
 Makhluk Hidup: Ani melihat seekor kucing yang sedang makan ikan. Apakah kucing termasuk hewan karnivor, herbivor, atau omnivor? Jelaskan.
 Benda dan Sifatnya: Ibu membeli gelas kaca dan gelas plastik. Mana yang lebih mudah pecah, dan mengapa?
 Energi dan Perubahannya: Lampu di kamar Budi menyala setelah ia menekan sakelar. Apa sumber energi yang membuat lampu menyala?
