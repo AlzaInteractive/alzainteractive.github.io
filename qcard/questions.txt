@@ -1,4 +1,4 @@
-2
+3
 Makhluk Hidup: Ani melihat seekor kucing yang sedang makan ikan. Apakah kucing termasuk hewan karnivor, herbivor, atau omnivor? Jelaskan.
 Benda dan Sifatnya: Ibu membeli gelas kaca dan gelas plastik. Mana yang lebih mudah pecah, dan mengapa?
 Energi dan Perubahannya: Lampu di kamar Budi menyala setelah ia menekan sakelar. Apa sumber energi yang membuat lampu menyala?
@@ -39,3 +39,32 @@ Energi dan Perubahannya: Ibu memanaskan air menggunakan kompor listrik. Apa sumb
 Makhluk Hidup: Di kebun, Rina melihat lebah mengumpulkan nektar dari bunga. Apa manfaat lebah bagi tanaman bunga?
 Bumi dan Alam Semesta: Matahari terbenam di barat setiap sore. Apa yang menyebabkan matahari tampak bergerak di langit?
 Lingkungan: Ani menanam pohon mangga di halaman rumah. Bagaimana pohon mangga membantu mengurangi polusi udara?
+Makhluk Hidup: Dika memberi makan ayam dengan biji jagung. Termasuk jenis hewan apakah ayam berdasarkan makanannya?
+Benda dan Sifatnya: Rina memegang es batu terlalu lama dan tangannya terasa dingin. Mengapa hal itu terjadi?
+Energi dan Perubahannya: Ibu menyalakan blender untuk membuat jus. Energi apa yang digunakan agar blender dapat berputar?
+Lingkungan: Di taman kota, banyak sampah plastik menumpuk. Apa yang bisa dilakukan masyarakat untuk menguranginya?
+Bumi dan Alam Semesta: Rudi melihat bayangannya di siang hari. Mengapa bayangan berubah panjang saat sore tiba?
+Makhluk Hidup: Ikan paus bernapas menggunakan paru-paru. Mengapa paus harus muncul ke permukaan air?
+Benda dan Sifatnya: Budi menuang air panas ke dalam gelas kaca dan gelas itu retak. Mengapa hal itu bisa terjadi?
+Energi dan Perubahannya: Ketika bermain ayunan, tubuh Siti bergerak maju mundur. Energi apa yang menyebabkan gerakan itu?
+Lingkungan: Hujan turun sangat deras hingga menyebabkan banjir. Apa yang bisa dilakukan agar banjir tidak terjadi lagi?
+Bumi dan Alam Semesta: Siti melihat awan hitam di langit. Apa yang biasanya terjadi setelah awan menjadi sangat gelap?
+Makhluk Hidup: Di kebun binatang, ada jerapah yang makan daun-daunan. Termasuk jenis hewan apakah jerapah?
+Benda dan Sifatnya: Ketika logam dipanaskan, ukurannya bertambah besar. Apa nama peristiwa tersebut?
+Energi dan Perubahannya: Budi bermain mobil-mobilan baterai. Energi apa yang digunakan mobil-mobilan itu agar bisa bergerak?
+Lingkungan: Banyak orang membakar sampah di halaman rumah. Apa akibatnya bagi udara di sekitar?
+Bumi dan Alam Semesta: Bulan kadang tampak sabit, separuh, dan bulat penuh. Apa yang menyebabkan bentuk bulan berubah-ubah?
+Makhluk Hidup: Seekor burung membuat sarang di pohon. Apa tujuan burung membuat sarang?
+Benda dan Sifatnya: Ketika garam dilarutkan dalam air, garam tidak terlihat lagi. Ke mana perginya garam tersebut?
+Energi dan Perubahannya: Ketika memukul drum, terdengar bunyi keras. Energi apa yang dihasilkan dari peristiwa itu?
+Lingkungan: Anak-anak di sekolah menanam pohon bersama. Apa manfaat kegiatan itu bagi lingkungan?
+Bumi dan Alam Semesta: Ketika malam hari, udara terasa lebih sejuk daripada siang hari. Mengapa demikian?
+Makhluk Hidup: Seekor kucing betina melahirkan anak. Apa ciri hewan yang berkembang biak dengan cara melahirkan?
+Benda dan Sifatnya: Ibu menutup botol minuman rapat-rapat agar air tidak tumpah. Mengapa bentuk air selalu mengikuti wadahnya?
+Energi dan Perubahannya: Rina menjemur pakaian di bawah matahari. Energi apa yang digunakan untuk mengeringkan pakaian?
+Lingkungan: Sungai di desa Ani menjadi bersih setelah warga melakukan kerja bakti. Apa manfaat sungai yang bersih bagi warga?
+Bumi dan Alam Semesta: Pagi hari terasa terang karena matahari bersinar. Mengapa siang hari lebih terang dibanding malam hari?
+Makhluk Hidup: Lebah membuat madu di sarangnya. Dari mana lebah mendapatkan bahan untuk membuat madu?
+Benda dan Sifatnya: Ketika udara panas, balon mengembang lebih besar. Mengapa hal itu bisa terjadi?
+Energi dan Perubahannya: Ketika Rudi menyalakan televisi, gambar dan suara muncul. Energi apa yang diubah agar televisi dapat berfungsi?
+Lingkungan: Di hutan, banyak pohon ditebang secara liar. Apa akibatnya bagi hewan yang hidup di sana?
